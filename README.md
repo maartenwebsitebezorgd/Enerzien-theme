@@ -1,2 +1,2 @@
-# Enerzien-2
+# Enerzien Theme
  
