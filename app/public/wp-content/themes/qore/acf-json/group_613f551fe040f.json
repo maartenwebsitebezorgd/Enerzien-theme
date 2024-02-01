@@ -1,0 +1,494 @@
+{
+    "key": "group_613f551fe040f",
+    "title": "Pagina header",
+    "fields": [
+        {
+            "key": "field_613f551fe7116",
+            "label": "",
+            "name": "hero",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_613f551fea98b",
+                    "label": "Kies een hero",
+                    "name": "choose_hero",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "basic": "Standaard",
+                        "large": "Uitgebreid"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "basic",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_613f551fea9a6",
+                    "label": "Afbeelding",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_613f551fea9bc",
+                    "label": "Titel",
+                    "name": "titel",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Overschrijft de pagina titel, laat leeg om niet te gebruiken.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_613f551fea9d0",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Laat leeg om niet te gebruiken.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_613f551fea9e5",
+                    "label": "Tekst",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Laat leeg om niet te gebruiken.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_613f551feaa0d",
+                    "label": "CTA 1",
+                    "name": "cta_1",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Laat leeg om niet te tonen.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_613f551feaa22",
+                    "label": "CTA 1 - Kies knop kleur",
+                    "name": "cta_1_bg",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "btn btn-primary": "Primaire kleur",
+                        "btn btn-secondary": "Secondaire kleur",
+                        "btn btn-primary btn-outline": "Primaire kleur (outline)",
+                        "btn btn-secondary btn-outline": "Secondaire kleur (outline)",
+                        "link link-primary": "Primaire kleur (link)",
+                        "link link-secondary": "Secondaire kleur (link)",
+                        "link link-base-content": "Tekst kleur (link)"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6149f4d142369",
+                    "label": "CTA 1 - Mobile - knop tekst",
+                    "name": "cta_1_mobile_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Laat leeg om niet te gebruiken.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_613f551feaa3f",
+                    "label": "CTA 2",
+                    "name": "cta_2",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Laat leeg om niet te tonen.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_613f551feaa95",
+                    "label": "CTA 2 - Kies knop kleur",
+                    "name": "cta_2_bg",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "btn btn-primary": "Primaire kleur",
+                        "btn btn-secondary": "Secondaire kleur",
+                        "btn btn-primary btn-outline": "Primaire kleur (outline)",
+                        "btn btn-secondary btn-outline": "Secondaire kleur (outline)",
+                        "link link-primary": "Primaire kleur (link)",
+                        "link link-secondary": "Secondaire kleur (link)",
+                        "link link-base-content": "Tekst kleur (link)"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6149f4ad42368",
+                    "label": "CTA 2 - Mobile - knop tekst",
+                    "name": "cta_2_mobile_text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Laat leeg om niet te gebruiken.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6165834fad3e4",
+                    "label": "USP's",
+                    "name": "usps",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 3,
+                    "layout": "block",
+                    "button_label": "USP toevoegen",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_61658378ad3e5",
+                            "label": "Titel",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_6165834fad3e4"
+                        },
+                        {
+                            "key": "field_6165837fad3e6",
+                            "label": "Tekst",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_6165834fad3e4"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_613f551feaaf1",
+                    "label": "Toon partners",
+                    "name": "show_partners",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "large"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_61655c245a5c2",
+                    "label": "Partners",
+                    "name": "partners",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_613f551feaaf1",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "partners"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "post_type",
+                        "taxonomy"
+                    ],
+                    "elements": "",
+                    "min": "",
+                    "max": 6,
+                    "return_format": "object",
+                    "bidirectional_target": []
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "themas"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706187666
+}

@@ -1,0 +1,41 @@
+{
+    "key": "group_613886aad8b2a",
+    "title": "Contact details",
+    "fields": [
+        {
+            "key": "field_613886adc4b59",
+            "label": "Contact details",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "LET OP: Contact details zijn te beheren onder \"Algemeen\" in het menu.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "116"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631094603
+}

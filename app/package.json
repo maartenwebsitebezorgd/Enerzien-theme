@@ -1,0 +1,81 @@
+{
+  "name": "qore-tailwind-boilerplate",
+  "version": "1.0.1",
+  "description": "Qore boilerplate for websites/shops using the Tailwind Framework",
+  "private": true,
+  "author": {
+    "name": "Qore Digital B.V.",
+    "email": "hello@qore.digital",
+    "url": "http://qore.digital"
+  },
+  "bugs": {
+    "url": "http://qore.digital/contact/"
+  },
+  "bundleDependencies": [],
+  "keywords": [
+    "sass",
+    "tailwind",
+    "css",
+    "qore",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailwindlabs/tailwindcss"
+  },
+  "engines": {
+    "node": ">=6.3.0",
+    "npm": ">=3.10.5"
+  },
+  "prettier": {
+    "plugins": [
+      "@prettier/plugin-php"
+    ]
+  },
+  "scripts": {
+    "build:css-app": "tailwindcss -i ./src/assets/scss/style.scss -o ./public/wp-content/themes/qore/dist/css/style.css --postcss --minify",
+    "build:css-editor": "tailwindcss -i ./src/assets/scss/lib/editor-style.scss -o ./public/wp-content/themes/qore/includes/admin/editor-style.css --postcss --minify",
+    "build:js": "./node_modules/.bin/esbuild ./src/assets/js/script.js --bundle --outfile=./public/wp-content/themes/qore/dist/js/script.js --minify",
+    "dev:css-app": "tailwindcss -i ./src/assets/scss/style.scss -o ./public/wp-content/themes/qore/dist/css/style.css --postcss",
+    "dev:css-editor": "tailwindcss -i ./src/assets/scss/lib/editor-style.scss -o ./public/wp-content/themes/qore/includes/admin/editor-style.css --postcss",
+    "dev:js": "./node_modules/.bin/esbuild ./src/assets/js/script.js --bundle --outfile=./public/wp-content/themes/qore/dist/js/script.js",
+    "start:css-app": "tailwindcss -i ./src/assets/scss/style.scss -o ./public/wp-content/themes/qore/dist/css/style.css --postcss --watch",
+    "start:css-editor": "tailwindcss -i ./src/assets/scss/lib/editor-style.scss -o ./public/wp-content/themes/qore/includes/admin/editor-style.css --postcss --watch",
+    "start:js": "./node_modules/.bin/esbuild ./src/assets/js/script.js --bundle --outfile=./public/wp-content/themes/qore/dist/js/script.js --watch",
+    "build": "cross-env NODE_ENV=production concurrently \"yarn copy\" \"yarn build:css-app\" \"yarn build:css-editor\" \"yarn build:js\"",
+    "copy:img": "copyfiles --up 2 \"./src/assets/img/**\" \"./public/wp-content/themes/qore/dist\"",
+    "copy:fonts": "copyfiles --up 2 \"./src/assets/fonts/**\" \"./public/wp-content/themes/qore/dist\"",
+    "copy:videos": "copyfiles --up 2 \"./src/assets/videos/**\" \"./public/wp-content/themes/qore/dist\"",
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn dev:css-app\" \"yarn dev:css-editor\" \"yarn dev:js\"",
+    "start": "cross-env NODE_ENV=development concurrently \"yarn copy\" \"yarn start:css-app\" \"yarn start:css-editor\" \"yarn start:js\"",
+    "copy": "concurrently \"yarn copy:img\" \"yarn copy:fonts\" \"yarn copy:videos\"",
+    "browser-sync": "cross-env NODE_ENV=development browser-sync start --proxy \"enerzien.test\" --host=\"enerzien.test\" --no-inject-changes --files=\"./\"",
+    "start-sync": "concurrently \"yarn browser-sync\" \"yarn start\""
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "browser-sync": "^2.27.10",
+    "concurrently": "^7.3.0",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "daisyui": "^4.6.1",
+    "esbuild": "^0.15.6",
+    "postcss": "^8.4.33",
+    "postcss-import": "^14.1.0",
+    "postcss-nested": "^5.0.3",
+    "postcss-nested-ancestors": "^3.0.0",
+    "postcss-nesting": "^10.1.10",
+    "prettier": "3.1.1",
+    "resolve-url-loader": "^5.0.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.4",
+    "flowbite": "^2.2.1",
+    "read-smore": "^2.0.4",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^8.3.2"
+  }
+}

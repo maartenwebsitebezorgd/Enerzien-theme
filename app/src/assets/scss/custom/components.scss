@@ -1,0 +1,96 @@
+@layer components {
+
+    .btn {
+        @apply inline-flex items-center justify-center normal-case font-bold font-heading px-8 pt-5 pb-4 text-base leading-none max-h-60 !text-white !h-auto;
+
+        svg {
+            @apply relative top-[-1px];
+        }
+    }
+
+    .h1 {
+        @apply font-black leading-tight text-[#001e1d] text-4xl sm:text-5xl md:text-6xl lg:text-6xl;
+    }
+    
+    .h2 {
+        @apply font-black leading-tight text-[#001e1d] text-3xl sm:text-4xl lg:text-5xl;
+    }
+    
+    .h3 {
+        @apply font-black leading-tight text-[#001e1d] text-3xl lg:text-4xl;
+    }
+    
+    .h4 {
+        @apply font-black leading-tight text-[#001e1d] text-2xl;
+    }
+    
+    .h5 {
+        @apply font-black leading-tight text-[#001e1d] text-lg lg:text-xl;
+    }
+
+.mask {
+    -webkit-mask-position: top;
+    mask-position: top;
+}
+
+.mask.mask-hexagon {
+    mask-image: url('../img/hexagon.svg');
+}
+
+.masonry-item {
+    page-break-inside: avoid;
+
+    img {
+        @apply w-full h-auto;
+    }
+}
+.badge {
+    @apply py-3 !text-white;
+}
+
+.link {
+    @apply font-manrope;
+
+    &:not(.underline) {
+        @apply no-underline text-inherit;
+
+        &:hover,
+        &:focus {
+            @apply underline;
+        }
+    }
+}
+
+.container {
+    @apply mx-auto;
+}
+
+.hyphens-none {
+    hyphens: none;
+}
+
+.hyphens-manual {
+    hyphens: manual;
+}
+
+.hyphens-auto {
+    hyphens: auto;
+}
+
+
+.smhidden {
+    @apply flex sm:hidden !important;
+}
+
+.mdhidden {
+    @apply flex md:hidden !important;
+}
+
+.lghidden {
+    @apply flex lg:hidden !important;
+}
+
+.xlhidden {
+    @apply flex xl:hidden !important;
+}
+}

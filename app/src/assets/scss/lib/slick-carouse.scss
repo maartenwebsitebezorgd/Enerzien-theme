@@ -1,0 +1,17 @@
+.slider {
+    display: none;
+
+    .slick-slide {
+        outline: none;
+        margin: 0 rem-calc(15);
+    }
+
+    .slick-list {
+        outline: none;
+        margin: 0 rem-calc(-15);
+    }
+
+    &.slick-initialized {
+        display: block;
+    }
+}

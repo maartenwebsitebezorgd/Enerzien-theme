@@ -1,0 +1,10 @@
+@import 'swiper/swiper-bundle';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Tailwind settings additions / overwrites */
+@import './custom/base.scss';
+@import './custom/components.scss';
+@import './custom/utilities.scss';

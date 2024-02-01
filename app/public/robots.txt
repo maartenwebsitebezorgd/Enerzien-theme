@@ -1,0 +1,3 @@
+Sitemap: https://enerzien.nu/sitemap_index.xml
+User-agent:*
+Disallow:
