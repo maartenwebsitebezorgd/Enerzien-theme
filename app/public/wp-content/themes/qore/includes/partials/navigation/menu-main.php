@@ -1,6 +1,6 @@
 <!-- navigation -->
 <nav id="menu-main"
-    class="relative border-b border-gray-200 bg-white text-gray-900 pl-4 pr-0 md:pl-10 xl:pr-10 py-4 z-50 rounded-xl ">
+    class="relative border-b border-gray-200 bg-white text-gray-900 pl-4 pr-4 xl:pl-10 xl:pr-10 py-4 z-50 xl:rounded-xl ">
     <div class="flex flex-wrap items-center gap-6">
         <div menu-logo class="flex items-center">
             <a href="<?php echo get_home_url('/'); ?>"
@@ -28,123 +28,105 @@
                 </svg>
             </button>
             <div class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto">
-                <ul class="!mb-0 flex flex-col font-medium md:mt-0 md:flex-row rtl:space-x-reverse">
-                    <li>
-                        <div class="dropdown static">
-                            <div tabindex="0" role="button"
-                                class="flex w-full items-center justify-between border-b border-gray-100 px-3 py-2 font-bold text-gray-900 hover:bg-gray-50 md:w-auto md:border-0 md:hover:text-emerald-600">
-                                Wat we doen
-                                <svg class="ms-3 h-2.5 w-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg>
-                            </div>
-                            <div tabindex="0"
-                                class="dropdown-content absolute left-0 z-[1] mt-3 w-full border-b border-gray-200 bg-white shadow-sm rounded-b-lg">
-                                <div class="container grid py-5 text-gray-900">
-                                    <ul aria-labelledby="mega-menu-full-dropdown-content"
-                                        class="mb-0 grid grid-cols-2 md:grid-cols-4">
-                                        <li>
-                                            <a href="#"
-                                                class="grid gap-3 rounded p-3 bg-base-50 hover:bg-base-100 md:grid-cols-[max-content_1fr]">
-                                                <span class="flex size-5 flex-row overflow-hidden text-emerald-600">
-                                                    <svg data-slot="icon" fill="none" stroke-width="2"
-                                                        stroke="currentColor" viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Haalbaarheid Studie</div>
-                                                    <span
-                                                        class="leading-xtight text-sm text-gray-500 dark:text-gray-400">Met
-                                                        vertrouwen en inzicht investeren in je volgende energie
-                                                        project.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="grid gap-3 rounded p-3 hover:bg-gray-50 md:grid-cols-[max-content_1fr]">
-                                                <span class="flex size-5 flex-row overflow-hidden text-emerald-600">
-                                                    <svg data-slot="icon" fill="none" stroke-width="2"
-                                                        stroke="currentColor" viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Project Ondersteuning</div>
-                                                    <span class="text-sm text-gray-400">Van ontwerp tot uitvoering,
-                                                        van projectmanagement tot exploitatie.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="grid gap-3 rounded p-3 hover:bg-gray-50 md:grid-cols-[max-content_1fr]">
-                                                <span class="flex size-5 flex-row overflow-hidden text-emerald-600">
-                                                    <svg data-slot="icon" fill="none" stroke-width="2"
-                                                        stroke="currentColor" viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Inzicht & Advies</div>
-                                                    <span class="text-sm text-gray-500 dark:text-gray-400">Overzicht
-                                                        en duidelijkheid, zodat jij je energiedoelen kunt
-                                                        bereiken.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="grid gap-3 rounded p-3 hover:bg-gray-50 md:grid-cols-[max-content_1fr]">
-                                                <span class="flex size-5 flex-row overflow-hidden text-emerald-600">
-                                                    <svg data-slot="icon" fill="none" stroke-width="2"
-                                                        stroke="currentColor" viewBox="0 0 24 24"
-                                                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <div>
-                                                    <div class="font-semibold">Technisch Beoordeling</div>
-                                                    <span class="text-sm text-gray-500 dark:text-gray-400">Onze
-                                                        adviezen zijn net zo stevig als onze energie technische
-                                                        achtergrond.</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="md:hover:bg-gray-5 block border-b border-gray-100 px-3 py-2 font-bold text-gray-900 hover:bg-gray-50 md:border-0 md:hover:text-emerald-700">Oplossingen</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="md:hover:bg-gray-5 block border-b border-gray-100 px-3 py-2 font-bold text-gray-900 hover:bg-gray-50 md:border-0 md:hover:text-emerald-700">Klantverhalen</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="md:hover:bg-gray-5 block border-b border-gray-100 px-3 py-2 font-bold text-gray-900 hover:bg-gray-50 md:border-0 md:hover:text-emerald-700">Voor
-                            wie</a>
-                    </li>
+                <?php
 
-                </ul>
+
+                function render_menu_with_submenus($menu_items, $parent_id = 0)
+                {
+                    $has_children = false;
+
+                    foreach ($menu_items as $item) {
+                        if ($item->menu_item_parent == $parent_id) {
+                            $has_children = true;
+                            break;
+                        }
+                    }
+
+                    if ($has_children) {
+                        echo '<ul class="!mb-0 flex flex-col font-medium md:mt-0 md:flex-row rtl:space-x-reverse">';
+                        foreach ($menu_items as $item) {
+                            if ($item->menu_item_parent == $parent_id) {
+                                // Check for sub-menu items
+                                $has_sub_children = false;
+                                foreach ($menu_items as $sub_item) {
+                                    if ($sub_item->menu_item_parent == $item->ID) {
+                                        $has_sub_children = true;
+                                        break;
+                                    }
+                                }
+
+                                if ($has_sub_children) {
+                                    // Render top-level button/link for items with sub-menu items
+                                    echo '<li>';
+                                    echo '<div class="dropdown static">';
+                                    echo '<div tabindex="0" role="button" class="flex w-full items-center justify-between border-b border-gray-100 px-3 py-2 font-bold text-gray-900 hover:bg-gray-50 md:w-auto md:border-0 md:hover:text-emerald-600">';
+                                    echo $item->title; // The title of the menu item
+                                    echo '<svg class="ms-3 h-2.5 w-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" /></svg>';
+                                    echo '</div>';
+                                    echo '<div tabindex="0" class="dropdown-content absolute left-0 z-[1] mt-2 w-full border-b border-gray-200 bg-white shadow-sm rounded-b-lg">';
+                                    echo '<div class="container grid py-5 text-gray-900">';
+                                    echo '<ul aria-labelledby="mega-menu-full-dropdown-content" class="mb-0 grid grid-cols-2 md:grid-cols-4"';
+
+                                    // Recursive call to render the mega menu dropdown for sub-menu items
+                                    render_menu_with_submenus($menu_items, $item->ID);
+
+                                    echo '</ul';
+                                    echo '</div>';
+                                    echo '</div>';
+                                    echo '</div>';
+                                    echo '</li>';
+                                } else {
+
+                                    if ($parent_id == 0) { // Check if it's a top-level item
+                                        echo '<li>';
+                                        echo '<a href="' . $item->url . '" class="md:hover:bg-gray-5 block border-b border-gray-100 px-3 py-2 font-bold text-gray-900 hover:bg-gray-50 md:border-0 md:hover:text-emerald-700">' . $item->title . '</a>';
+                                        echo '</li>';
+                                    } else {
+                                        // Render as a regular menu item if no sub-menu items
+                                        // Start of the modified part
+                                        echo '<li>';
+                                        echo '<a href="' . $item->url . '" class="grid gap-3 rounded p-3 bg-base-50 hover:bg-base-100 md:grid-cols-[max-content_1fr]">';
+                                        echo '<span class="flex size-5 flex-row overflow-hidden text-emerald-600">';
+                                        echo '<svg data-slot="icon" fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
+                                        echo '<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>';
+                                        echo '</svg>';
+                                        echo '</span>';
+                                        echo '<div>';
+                                        echo '<div class="font-semibold">' . $item->title . '</div>';
+                                        // Placeholder for description, adjust as needed
+                                        echo '<span class="leading-xtight text-sm text-gray-500 dark:text-gray-400">Description or other content here.</span>';
+                                        echo '</div>';
+                                        echo '</a>';
+                                        // End of the modified part
+                
+                                        // Recursive call to render sub-menu items
+                                        render_menu_with_submenus($menu_items, $item->ID);
+
+                                        echo '</li>';
+                                    }
+                                }
+                            }
+                        }
+                        echo '</ul>';
+                    }
+                }
+
+
+
+                // Get the menu object based on location
+                $location = 'menu-main';
+                $locations = get_nav_menu_locations();
+
+                if (isset($locations[$location])) {
+                    $menu = wp_get_nav_menu_object($locations[$location]);
+                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+                    if (!empty($menu_items)) {
+                        render_menu_with_submenus($menu_items);
+                    }
+                }
+
+                ?>
             </div>
         </div>
         <div menu-actions class="ml-auto flex gap-2">
