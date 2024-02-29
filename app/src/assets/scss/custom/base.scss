@@ -803,6 +803,10 @@
     ul {
         @apply leading-relaxed mb-4;
     }
+
+    .footer-menus a {
+     @apply text-sm leading-6 text-gray-300 hover:text-white
+   }
 }
 
 .slider-testmonials {
@@ -875,3 +879,5 @@
         @apply py-12
     } 
 }
+
+

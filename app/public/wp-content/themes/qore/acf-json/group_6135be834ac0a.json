@@ -6,6 +6,7 @@
             "key": "field_6135be8860d58",
             "label": "Vervolgstappen",
             "name": "next_steps",
+            "aria-label": "",
             "type": "group",
             "instructions": "Vervolgstappen voor een contactformulier inzending.",
             "required": 0,
@@ -21,6 +22,7 @@
                     "key": "field_61434be6653cc",
                     "label": "Subtitel",
                     "name": "subtitle",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -40,6 +42,7 @@
                     "key": "field_6135beaa60d59",
                     "label": "Titel",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -59,6 +62,7 @@
                     "key": "field_6135beb460d5a",
                     "label": "Tekst",
                     "name": "text",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -78,6 +82,7 @@
                     "key": "field_61485771443ed",
                     "label": "Titel - Vervolg",
                     "name": "items_title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -97,6 +102,7 @@
                     "key": "field_6135bed260d5c",
                     "label": "Items",
                     "name": "items",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -111,11 +117,13 @@
                     "max": 0,
                     "layout": "block",
                     "button_label": "Stap toevoegen",
+                    "rows_per_page": 20,
                     "sub_fields": [
                         {
                             "key": "field_6135bedb60d5d",
                             "label": "Titel",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -129,7 +137,8 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_6135bed260d5c"
                         }
                     ]
                 }
@@ -141,7 +150,14 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "75"
+                "value": "297"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "299"
             }
         ]
     ],
@@ -155,5 +171,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1632130966
+    "show_in_rest": 0,
+    "modified": 1709202749
 }

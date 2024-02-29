@@ -269,15 +269,15 @@ function use_pagebuilder_template_by_default()
 
 function acf_flexible_content_collapse_on_load()
 { ?>
-    <script type="text/javascript">
-        (function($) {
-            jQuery(document).ready(function() {
-                jQuery('.layout').addClass('-collapsed');
-                jQuery('body.post-php .acf-postbox').addClass('closed');
-            });
-        })(jQuery);
-    </script>
-    <?php
+                                        <script type="text/javascript">
+                                            (function($) {
+                                                jQuery(document).ready(function() {
+                                                    jQuery('.layout').addClass('-collapsed');
+                                                    jQuery('body.post-php .acf-postbox').addClass('closed');
+                                                });
+                                            })(jQuery);
+                                        </script>
+                                        <?php
 }
 
 function calculate_readtime($post_id = '')
@@ -416,18 +416,18 @@ function webrand_filter_function()
             echo '<hr class="my-10 border-base-200">' . $reset_btn;
         } ?>
 
-    <?php
+                                                                            <?php
     } else { ?>
 
-        <div class="no-results w-full py-10">
-            <div class="mb-10">
-                <h3 class="text-2xl leading-tight font-bold"><?php echo __('Geen resultaten', 'qore'); ?></h3>
-                <p><?php echo __('Geen resultaten gevonden in combinatie met de door jouw gekozen filters', 'qore'); ?>.</p>
-            </div>
-            <?php echo $reset_btn; ?>
-        </div>
+                                                                                <div class="no-results w-full py-10">
+                                                                                    <div class="mb-10">
+                                                                                        <h3 class="text-2xl leading-tight font-bold"><?php echo __('Geen resultaten', 'qore'); ?></h3>
+                                                                                        <p><?php echo __('Geen resultaten gevonden in combinatie met de door jouw gekozen filters', 'qore'); ?>.</p>
+                                                                                    </div>
+                                                                                    <?php echo $reset_btn; ?>
+                                                                                </div>
 
-<?php }
+                                    <?php }
 
     wp_reset_query();
 
@@ -456,7 +456,7 @@ function renderStarRating($rating, $maxRating = 5)
     $halfStar = "<i class='fas fa-star-half-alt'></i>";
     $emptyStar = "<i class='far fa-star'></i>";
 
-    $fullStarCount = (int)$rating;
+    $fullStarCount = (int) $rating;
     $halfStarCount = ceil($rating) - $fullStarCount;
     $emptyStarCount = $maxRating - $fullStarCount - $halfStarCount;
 
@@ -513,6 +513,19 @@ function archive_title($title = '')
 
     return $title;
 }
+
+function wpb_custom_new_menu()
+{
+    register_nav_menus(
+        array(
+            'footer-1' => __('Footer 1'),
+            'footer-2' => __('Footer 2'),
+            'footer-3' => __('Footer 3'),
+            'footer-4' => __('Footer 4')
+        )
+    );
+}
+add_action('init', 'wpb_custom_new_menu');
 
 //===================================================================//
 //============== Include support, filters and actions ===============//
