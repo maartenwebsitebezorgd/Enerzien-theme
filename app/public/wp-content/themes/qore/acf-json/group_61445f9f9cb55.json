@@ -6,6 +6,7 @@
             "key": "field_61483cc740273",
             "label": "Avatar",
             "name": "avatar",
+            "aria-label": "",
             "type": "image",
             "instructions": "Laat leeg om Gravatar te gebruiken.",
             "required": 0,
@@ -30,6 +31,7 @@
             "key": "field_61445fc03215e",
             "label": "Functie",
             "name": "function",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -49,6 +51,7 @@
             "key": "field_61445fc63215f",
             "label": "Bedrijf",
             "name": "company",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -68,6 +71,7 @@
             "key": "field_61446051ce9b6",
             "label": "Company URL",
             "name": "url",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -98,5 +102,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632124134
+    "show_in_rest": false,
+    "modified": 1709542263
 }

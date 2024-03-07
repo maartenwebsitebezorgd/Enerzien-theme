@@ -1,3 +1,7 @@
+<?php
+$buttons = get_field('main_menu_links', 'option');
+?>
+
 <!-- navigation -->
 <nav id="menu-main"
     class="relative border-b border-gray-200 bg-white text-gray-900 pl-4 pr-4 xl:pl-10 xl:pr-10 py-4 z-50 xl:rounded-xl ">
@@ -75,16 +79,11 @@
                                         // Render as a regular menu item if no sub-menu items
                                         // Start of the modified part
                                         echo '<li>';
-                                        echo '<a href="' . $item->url . '" class="grid gap-3 rounded p-3 bg-base-50 hover:bg-base-100 md:grid-cols-[max-content_1fr]">';
-                                        echo '<span class="flex size-5 flex-row overflow-hidden text-emerald-600">';
-                                        echo '<svg data-slot="icon" fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">';
-                                        echo '<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>';
-                                        echo '</svg>';
-                                        echo '</span>';
+                                        echo '<a href="' . $item->url . '"class="rounded p-3 bg-base-50 hover:bg-base-100">';
                                         echo '<div>';
                                         echo '<div class="font-semibold">' . $item->title . '</div>';
                                         // Placeholder for description, adjust as needed
-                                        echo '<span class="leading-xtight text-sm text-gray-500 dark:text-gray-400">Description or other content here.</span>';
+                                        echo '<span class="leading-xtight text-sm text-gray-500 dark:text-gray-400">' . $item->description . '</span>';
                                         echo '</div>';
                                         echo '</a>';
                                         // End of the modified part
@@ -120,10 +119,10 @@
             </div>
         </div>
         <div class="hidden ml-auto md:flex gap-2">
-            <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+            <a href="<?php echo $buttons['link_1']; ?>"
                 class="rounded-md bg-stone-200 px-3.5 py-2.5 text-base font-semibold tracking-wide text-stone-900 shadow-sm hover:bg-stone-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-300">Werken
                 Bij</a>
-            <a href="<?php echo esc_url(home_url('/contact/')); ?>"
+            <a href="<?php echo $buttons['link_2']; ?>"
                 class="rounded-md bg-emerald-600 px-3.5 py-2.5 text-base font-semibold tracking-wide text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">Gratis
                 Advies</a>
         </div>

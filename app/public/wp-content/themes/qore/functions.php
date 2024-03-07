@@ -36,6 +36,7 @@ include_once get_template_directory() . '/includes/custom-post-types/reviews.php
 include_once get_template_directory() . '/includes/custom-post-types/projecten.php';
 include_once get_template_directory() . '/includes/custom-post-types/themas.php';
 include_once get_template_directory() . '/includes/custom-post-types/partners.php';
+include_once get_template_directory() . '/includes/custom-post-types/vacatures.php';
 
 // Taxonomies
 // include_once get_template_directory() . '/includes/taxonomies/taxonomy-sample.php';

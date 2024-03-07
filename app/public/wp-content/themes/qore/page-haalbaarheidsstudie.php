@@ -2,7 +2,7 @@
 
 get_header();
 
-$form_id = 3;
+$form_id = 2;
 $form_title = false;
 $form_description = false;
 $form_inactive = false;
@@ -142,39 +142,39 @@ $modal_status = !empty($_GET['submit']) && $_GET['submit'] == 'true' ? 'checked'
             </div>
 
             <?php if (!empty($next_steps['items'])): ?>
-                            <div class="py-14 md:py-16 px-4 md:px-16 bg-white">
+                                <div class="py-14 md:py-16 px-4 md:px-16 bg-white">
 
-                                <h2 class="h3 mb-12">
-                                    <?php echo !empty($next_steps['items_title']) ? $next_steps['items_title'] : 'Wat gebeurt er nu?'; ?>
-                                </h2>
+                                    <h2 class="h3 mb-12">
+                                        <?php echo !empty($next_steps['items_title']) ? $next_steps['items_title'] : 'Wat gebeurt er nu?'; ?>
+                                    </h2>
 
-                                <div class="items relative w-full">
-                                    <div class="hidden sm:block absolute top-[26px] left-1/2 w-full h-0 border-dashed border-b-2 border-base-200 z-1 ml-[-256px] max-w-[512px]"></div>
-                                    <ul class="relative w-full grid grid-cols-1 sm:grid-cols-3 sm:gap-x-14 z-2 text-left sm:text-center">
-                                        <?php foreach ($next_steps['items'] as $key => $value):
-                                            $nr = $key + 1;
-                                            if (!empty($value['title'])) { ?>
-                                                                        <li class="stap mb-10 flex justify-start items-start flex-row sm:flex-col sm:justify-center sm:items-center">
-                                                                            <span class="text-2xl w-14 h-14 mb-4 rounded-full bg-primary-tint inline-flex items-center justify-center font-bold text-white flex-shrink-0 mr-8 md:mr-0">
-                                                                                <?php echo $nr; ?>
-                                                                            </span>
-                                                                            <p class="text-base"><?php echo $value['title']; ?></p>
-                                                                        </li>
-                                                    <?php }
-                                        endforeach; ?>
-                                    </ul>
+                                    <div class="items relative w-full">
+                                        <div class="hidden sm:block absolute top-[26px] left-1/2 w-full h-0 border-dashed border-b-2 border-base-200 z-1 ml-[-256px] max-w-[512px]"></div>
+                                        <ul class="relative w-full grid grid-cols-1 sm:grid-cols-3 sm:gap-x-14 z-2 text-left sm:text-center">
+                                            <?php foreach ($next_steps['items'] as $key => $value):
+                                                $nr = $key + 1;
+                                                if (!empty($value['title'])) { ?>
+                                                                                    <li class="stap mb-10 flex justify-start items-start flex-row sm:flex-col sm:justify-center sm:items-center">
+                                                                                        <span class="text-2xl w-14 h-14 mb-4 rounded-full bg-primary-tint inline-flex items-center justify-center font-bold text-white flex-shrink-0 mr-8 md:mr-0">
+                                                                                            <?php echo $nr; ?>
+                                                                                        </span>
+                                                                                        <p class="text-base"><?php echo $value['title']; ?></p>
+                                                                                    </li>
+                                                            <?php }
+                                            endforeach; ?>
+                                        </ul>
+                                    </div>
+
+                                    <div class="modal-action justify-center">
+                                        <a title="Terug naar de homepage" href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-secondary md:w-auto w-full">
+                                            <span>Terug naar home</span>
+                                            <svg class="ml-3 fill-current w-5 h-5" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="m17.2725971 15.1315799v-8.93974806l1.3504357.81027961c.4305395.25830549.9889863.11871653 1.2472554-.31180474.25836-.43052127.1187256-.98893166-.3118139-1.24724624l-4.5652999-2.73919817-3.4919513-2.10386157-.000091-.00006364c-.2538146-.15292514-.4486301-.27029623-.6137187-.35854046-.0385449-.02155424-.0776352-.04160851-.1172711-.06014461-.1374526-.06705361-.2565418-.11168935-.3789038-.13865261-.2577236-.05679921-.52481083-.05679921-.78253451 0-.12272556.02703598-.24208753.07183536-.3799947.13917987-.03890855.01823611-.07727165.03792675-.11518021.05906282-.16527043.08831695-.36035861.20585167-.6147187.35910408l-.00009091.00002727-3.49714215 2.10703426-4.56008186 2.73605276c-.43052127.25831458-.57012115.81672497-.31180475 1.24724624.25830549.43052127.81671589.57011023 1.24723716.31180474l1.35041753-.81024324v8.93971169c0 1.0183495 0 1.5274333.19816996 1.9163369.17430666.3421771.45244824.6202641.79456165.7946253.38892185.1980882.89806021.1980882 1.91631873.1980882h1.63634082v-5.4544694c0-1.5062518 1.22098298-2.72723474 2.7272347-2.72723474 1.50625174 0 2.72723474 1.22098294 2.72723474 2.72723474v5.4544694h1.6363408c1.0182585 0 1.5274332 0 1.9163369-.1980882.3420861-.1743612.6202641-.4524482.7945344-.7946253.198179-.3889036.198179-.8979874.198179-1.9163369z" fill="currentColor" fill-rule="evenodd" transform="translate(0 -.04063)" />
+                                            </svg>
+                                        </a>
+                                        <!-- <label for="modal-gform-submit" class="btn">Close</label> -->
+                                    </div>
                                 </div>
-
-                                <div class="modal-action justify-center">
-                                    <a title="Terug naar de homepage" href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-secondary md:w-auto w-full">
-                                        <span>Terug naar home</span>
-                                        <svg class="ml-3 fill-current w-5 h-5" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="m17.2725971 15.1315799v-8.93974806l1.3504357.81027961c.4305395.25830549.9889863.11871653 1.2472554-.31180474.25836-.43052127.1187256-.98893166-.3118139-1.24724624l-4.5652999-2.73919817-3.4919513-2.10386157-.000091-.00006364c-.2538146-.15292514-.4486301-.27029623-.6137187-.35854046-.0385449-.02155424-.0776352-.04160851-.1172711-.06014461-.1374526-.06705361-.2565418-.11168935-.3789038-.13865261-.2577236-.05679921-.52481083-.05679921-.78253451 0-.12272556.02703598-.24208753.07183536-.3799947.13917987-.03890855.01823611-.07727165.03792675-.11518021.05906282-.16527043.08831695-.36035861.20585167-.6147187.35910408l-.00009091.00002727-3.49714215 2.10703426-4.56008186 2.73605276c-.43052127.25831458-.57012115.81672497-.31180475 1.24724624.25830549.43052127.81671589.57011023 1.24723716.31180474l1.35041753-.81024324v8.93971169c0 1.0183495 0 1.5274333.19816996 1.9163369.17430666.3421771.45244824.6202641.79456165.7946253.38892185.1980882.89806021.1980882 1.91631873.1980882h1.63634082v-5.4544694c0-1.5062518 1.22098298-2.72723474 2.7272347-2.72723474 1.50625174 0 2.72723474 1.22098294 2.72723474 2.72723474v5.4544694h1.6363408c1.0182585 0 1.5274332 0 1.9163369-.1980882.3420861-.1743612.6202641-.4524482.7945344-.7946253.198179-.3889036.198179-.8979874.198179-1.9163369z" fill="currentColor" fill-rule="evenodd" transform="translate(0 -.04063)" />
-                                        </svg>
-                                    </a>
-                                    <!-- <label for="modal-gform-submit" class="btn">Close</label> -->
-                                </div>
-                            </div>
             <?php endif; ?>
 
         </div>

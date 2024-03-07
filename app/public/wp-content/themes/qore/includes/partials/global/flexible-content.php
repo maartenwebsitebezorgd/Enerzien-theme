@@ -63,5 +63,8 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'partners_slider') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'partners-slider', $args);
+    } elseif (get_row_layout() === 'uitgelichte_vacatures') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'uitgelichte-vacatures', $args);
     }
 }
