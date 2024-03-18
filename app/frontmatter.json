@@ -1,3 +1,8 @@
 {
-  "$schema": "https://frontmatter.codes/frontmatter.schema.json"
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.pageFolders": [
+    {
+      "path": "[[workspace]]/public/wp-content/plugins/send-emails-with-mandrill"
+    }
+  ]
 }

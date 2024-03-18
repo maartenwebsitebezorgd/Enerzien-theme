@@ -1,8 +1,4 @@
 {
     "intelephense.diagnostics.implementationErrors": false,
-    "frontMatter.content.pageFolders": [
-        {
-            "path": "[[workspace]]/public/wp-content/plugins/send-emails-with-mandrill"
-        }
-    ]
+    "php.version": "5.3"
 }
