@@ -807,32 +807,7 @@
     .footer-menus a {
      @apply text-sm leading-6 text-gray-300 hover:text-white
    }
-}
 
-.slider-testmonials {
-    .swiper-slide {
-        @apply blur-sm opacity-90;
-    }
-    .swiper-slide-active {
-        @apply shadow border;
-    }
-}
-
-.swiper-slide-active {
-    @apply !blur-0 !opacity-100;
-}
-
-.padding-section-large {
-    @apply py-16
-} 
-.padding-section-medium {
-    @apply py-12
-} 
-.padding-section-small {
-    @apply py-8
-} 
-
-@media (min-width: 640px) { 
     .padding-section-large {
         @apply py-16
     } 
@@ -842,7 +817,18 @@
     .padding-section-small {
         @apply py-8
     } 
-}
+
+    @media (min-width: 640px) { 
+        .padding-section-large {
+            @apply py-16
+        } 
+        .padding-section-medium {
+            @apply py-12
+        } 
+        .padding-section-small {
+            @apply py-8
+        } 
+    }
 
 @media (min-width: 768px) {  
     .padding-section-large {
@@ -879,5 +865,24 @@
         @apply py-12
     } 
 }
+
+.slider-testmonials {
+    .swiper-slide {
+        @apply blur-sm opacity-90;
+    }
+    .swiper-slide-active {
+        @apply shadow border;
+    }
+}
+
+.swiper-slide-active {
+    @apply !blur-0 !opacity-100;
+}
+
+}
+
+
+
+
 
 

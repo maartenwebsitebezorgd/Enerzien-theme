@@ -1,35 +1,35 @@
 <?php
 $group = get_sub_field('image_textblock');
-$align = !empty($group['align']) ? $group['align'] : 'items-start';
+$align = !empty ($group['align']) ? $group['align'] : 'items-start';
 ?>
 
 <section class="padding-section-medium">
     <div class="container">
         <div class="grid grid-cols-1 items-center justify-items-center gap-12 md:gap-20 md:grid-cols-2">
             <div>
-                <?php if (!empty($group['subtitle'])): ?>
+                <?php if (!empty ($group['subtitle'])): ?>
                     <h5 class="mb-4 text-sm font-bold uppercase tracking-widest text-emerald-600 sm:text-base">
                         <?php echo $group['subtitle']; ?>
                     </h5>
                 <?php endif; ?>
-                <?php if (!empty($group['title'])): ?>
+                <?php if (!empty ($group['title'])): ?>
                     <h2 class="text-pretty text-2xl font-bold sm:text-3xl lg:text-4xl leading-xtight">
                         <?php echo $group['title']; ?>
                     </h2>
                 <?php endif; ?>
-                <?php if (!empty($group['text'])): ?>
+                <?php if (!empty ($group['text'])): ?>
                     <div class="mt-5 text-pretty text-lg lg:text-xl">
                         <?php echo the_content_more($group['text']); ?>
                     </div>
                 <?php endif; ?>
                 <div class="mt-10 flex items-center gap-x-6">
-                    <?php if (!empty($group['cta_1'])): ?>
+                    <?php if (!empty ($group['cta_1'])): ?>
                         <a title="<?php echo $group['cta_1']['title']; ?>" href="<?php echo $group['cta_1']['url']; ?>"
                             class="rounded-md bg-emerald-600 px-3.5 py-2.5 text-base font-semibold tracking-wide text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">
                             <?php echo $group['cta_1']['title']; ?>
                         </a>
                     <?php endif; ?>
-                    <?php if (!empty($group['cta_2'])): ?>
+                    <?php if (!empty ($group['cta_2'])): ?>
                         <a title="<?php echo $group['cta_2']['title']; ?>" href="<?php echo $group['cta_2']['url']; ?>"
                             class="font-semibold leading-6 text-gray-900 flex gap-2 items-center transition-all hover:gap-3">
                             <?php echo $group['cta_2']['title']; ?><span class="w-4" aria-hidden="true"><svg
@@ -44,7 +44,7 @@ $align = !empty($group['align']) ? $group['align'] : 'items-start';
             </div>
             <div class="<?php echo $group['image_right'] == true ? 'order-last' : 'order-first'; ?>">
                 <div class="relative aspect-[1/1] w-full mask mask-hexagon">
-                    <?php if (!empty($group['image'])): ?>
+                    <?php if (!empty ($group['image'])): ?>
                         <?php echo wp_get_attachment_image($group['image']['ID'], 'shape-image', false, ['class' => 'w-full h-full']); ?>
                     <?php endif; ?>
                 </div>
