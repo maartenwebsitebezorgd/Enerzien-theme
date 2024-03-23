@@ -2,7 +2,6 @@
 $buttons = get_field('main_menu_links', 'option');
 ?>
 
-<!-- navigation -->
 <nav id="menu-main"
     class="relative border-b border-gray-200 bg-white text-gray-900 pl-4 pr-4 xl:pl-10 xl:pr-10 py-4 z-50 xl:rounded-xl ">
     <div class="flex flex-wrap items-center gap-2 md:gap-6">
@@ -79,12 +78,10 @@ $buttons = get_field('main_menu_links', 'option');
                                         // Render as a regular menu item if no sub-menu items
                                         // Start of the modified part
                                         echo '<li>';
-                                        echo '<a href="' . $item->url . '"class="rounded p-3 bg-base-50 hover:bg-base-100">';
-                                        echo '<div>';
-                                        echo '<div class="font-semibold">' . $item->title . '</div>';
+                                        echo '<a href="' . $item->url . '"class="rounded p-3 bg-base-50 hover:bg-base-100 flex flex-col gap-2">';
+                                        echo '<span class="font-semibold">' . $item->title . '</span>';
                                         // Placeholder for description, adjust as needed
                                         echo '<span class="leading-xtight text-sm text-gray-500 dark:text-gray-400">' . $item->description . '</span>';
-                                        echo '</div>';
                                         echo '</a>';
                                         // End of the modified part
                 
@@ -106,11 +103,11 @@ $buttons = get_field('main_menu_links', 'option');
                 $location = 'menu-main';
                 $locations = get_nav_menu_locations();
 
-                if (isset($locations[$location])) {
+                if (isset ($locations[$location])) {
                     $menu = wp_get_nav_menu_object($locations[$location]);
                     $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-                    if (!empty($menu_items)) {
+                    if (!empty ($menu_items)) {
                         render_menu_with_submenus($menu_items);
                     }
                 }

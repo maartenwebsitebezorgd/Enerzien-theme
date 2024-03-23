@@ -2,14 +2,14 @@
 $group = get_sub_field('media_steps');
 ?>
 
-<section class="overflow-hidden bg-white py-32">
+<section class="overflow-hidden padding-section-medium">
   <div class="container">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:gap-24">
-      <div class="w-full">
+      <div class="w-full h-full flex items-center">
         <div
-          class="h-full w-full transform overflow-hidden rounded-lg object-cover transition duration-1000 ease-in-out hover:-translate-y-4">
+          class="w-full transform overflow-hidden rounded-md transition duration-1000 ease-in-out hover:-translate-y-4 mask mask-hexagon aspect-[1/1]">
           <?php if (!empty ($group['main_image'])): ?>
-            <?php echo wp_get_attachment_image($group['main_image']['ID'], 'shape-image', false, ['class' => 'w-full h-full']); ?>
+            <?php echo wp_get_attachment_image($group['main_image']['ID'], 'shape-image', false, ['class' => 'w-full h-full object-cover']); ?>
           <?php endif; ?>
         </div>
       </div>
@@ -20,7 +20,7 @@ $group = get_sub_field('media_steps');
           </h2>
         <?php endif; ?>
         <?php if (!empty ($group['title'])): ?>
-          <h2 class="h2 mb-12 md:mb-20 md:max-w-lg">
+          <h2 class="h2 mb-12 md:mb-12 md:max-w-lg">
             <?php echo $group['title']; ?>
           </h2>
         <?php endif; ?>
@@ -28,7 +28,7 @@ $group = get_sub_field('media_steps');
           <div class="w-full p-1.5">
             <div class="-m-6 flex flex-wrap">
               <div class="w-auto p-6">
-                <div class="relative mb-3 h-10 w-10 rounded-full bg-green-600 text-lg font-bold text-white">
+                <div class="relative mb-3 size-12 rounded-full bg-green-600 text-lg font-bold text-white">
                   <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">1</span>
                 </div>
                 <img class="relative left-3" src="https://shuffle.dev/flaro-assets/images/how-it-works/line.svg"
@@ -53,7 +53,7 @@ $group = get_sub_field('media_steps');
           <div class="w-full p-1.5">
             <div class="-m-6 flex flex-wrap">
               <div class="w-auto p-6">
-                <div class="relative -left-1 mb-3 h-10 w-10 rounded-full bg-green-600 text-lg font-bold text-white">
+                <div class="relative -left-1 mb-3 size-12 rounded-full bg-green-600 text-lg font-bold text-white">
                   <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">2</span>
                 </div>
                 <img class="relative left-3" src="https://shuffle.dev/flaro-assets/images/how-it-works/line2.svg"
@@ -78,7 +78,7 @@ $group = get_sub_field('media_steps');
           <div class="w-full p-1.5">
             <div class="-m-6 flex flex-wrap">
               <div class="w-auto p-6">
-                <div class="relative left-5 mb-3 h-10 w-10 rounded-full bg-green-600 text-lg font-bold text-white">
+                <div class="relative left-5 mb-3 size-12 rounded-full bg-green-600 text-lg font-bold text-white">
                   <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">3</span>
                 </div>
               </div>

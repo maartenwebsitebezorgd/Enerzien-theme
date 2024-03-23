@@ -66,5 +66,11 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'media_steps') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'media-steps', $args);
+    } elseif (get_row_layout() === 'content_media') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'content-media', $args);
+    } elseif (get_row_layout() === 'offgrid_gallery') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'offgrid-gallery', $args);
     }
 }

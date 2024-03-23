@@ -805,79 +805,50 @@
     }
 
     .footer-menus a {
-     @apply text-sm leading-6 text-gray-300 hover:text-white
-   }
-
-    .padding-section-large {
-        @apply py-16
-    } 
-    .padding-section-medium {
-        @apply py-12
-    } 
-    .padding-section-small {
-        @apply py-8
-    } 
-
-    @media (min-width: 640px) { 
-        .padding-section-large {
-            @apply py-16
-        } 
-        .padding-section-medium {
-            @apply py-12
-        } 
-        .padding-section-small {
-            @apply py-8
-        } 
+        @apply text-sm leading-6 text-gray-300 hover:text-white
     }
 
-@media (min-width: 768px) {  
     .padding-section-large {
-        @apply py-24
+        @apply py-16 sm:py-16 md:py-24 lg:py-28 xl:py-28
     } 
     .padding-section-medium {
-        @apply py-16
+        @apply py-12 sm:py-12 md:py-16 lg:py-20 xl:py-20
     } 
     .padding-section-small {
-        @apply py-12
+        @apply py-8 sm:py-8 md:py-12 lg:py-12 xl:py-12
     } 
-}
 
-@media (min-width: 1024px) { 
-    .padding-section-large {
-        @apply py-28
+    .padding-bottom-large {
+        @apply pb-16 sm:pb-16 md:pb-24 lg:pb-28 xl:pb-28
     } 
-    .padding-section-medium {
-        @apply py-20
+    .padding-top-large {
+        @apply pt-16 sm:pt-16 md:pt-24 lg:pt-28 xl:pt-28
     } 
-    .padding-section-small {
-        @apply py-12
+    .padding-bottom-medium {
+        @apply pb-12 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-20
     } 
-}
+    .padding-top-medium {
+        @apply pt-12 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-20
+    } 
+    .padding-bottom-small {
+        @apply pb-8 sm:pb-8 md:pb-12 lg:pb-12 xl:pb-12
+    } 
+    .padding-top-small {
+        @apply pt-8 sm:pt-8 md:pt-12 lg:pt-12 xl:pt-12
+    } 
 
-@media (min-width: 1280px) {  
-    .padding-section-large {
-        @apply py-28
-    } 
-    .padding-section-medium {
-        @apply py-20
-    } 
-    .padding-section-small {
-        @apply py-12
-    } 
-}
-
-.slider-testmonials {
-    .swiper-slide {
-        @apply blur-sm opacity-90;
+    .slider-testmonials {
+        .swiper-slide {
+            @apply blur-sm opacity-90;
+        }
+        .swiper-slide-active {
+            @apply shadow border;
+        }
     }
+
     .swiper-slide-active {
-        @apply shadow border;
+        @apply !blur-0 !opacity-100;
     }
-}
-
-.swiper-slide-active {
-    @apply !blur-0 !opacity-100;
-}
 
 }
 
