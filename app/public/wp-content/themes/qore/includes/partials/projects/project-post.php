@@ -24,15 +24,15 @@ $post_meta_args = [
         </div>
     <?php endif; ?>
     <div blog_body class="flex grow flex-col justify-between space-y-6 bg-gray-50 p-5">
-        <div content-top class="space-y-3">
+        <div>
             <?php get_template_part('includes/partials/articles/post', 'meta', $post_meta_args); ?>
-            <h3 class="h4 font-bold">
+            <h3 class="h5 font-bold">
                 <a class="text-gray-900 hover:no-underline" href="<?php echo get_the_permalink(); ?>">
                     <span class="absolute inset-0"></span>
                     <?php echo get_the_title(); ?>
                 </a>
             </h3>
-            <p class="text-gray-700">
+            <p class="text-gray-700 mt-3">
                 <?php echo excerpt_only(20); ?>
             </p>
         </div>

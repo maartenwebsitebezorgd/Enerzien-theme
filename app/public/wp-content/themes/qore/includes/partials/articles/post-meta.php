@@ -8,7 +8,7 @@ if (!empty ($categories)) {
 }
 ?>
 
-<div class="post-meta flex flex-row gap-2 flex-wrap items-center justify-start">
+<div class="post-meta flex flex-row gap-2 flex-wrap items-center justify-start mb-3">
 
     <?php if (!empty ($cat)): ?>
         <div class="inline-flex items-center justify-start text-base-content text-base font-manrope font-extrabold mr-1">
