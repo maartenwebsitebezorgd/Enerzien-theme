@@ -2978,6 +2978,60 @@
                                     "max_size": "",
                                     "mime_types": "",
                                     "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_660178f02247a",
+                                    "label": "Padding Top",
+                                    "name": "padding_top",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "padding-top-large": "Groot",
+                                        "padding-top-medium": "Standaard",
+                                        "padding-top-small": "Klein"
+                                    },
+                                    "default_value": "padding-top-medium",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_660179262247b",
+                                    "label": "Padding Bottom",
+                                    "name": "padding_bottom",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "padding-bottom-large": "Groot",
+                                        "padding-bottom-medium": "Standaard",
+                                        "padding-bottom-small": "Klein"
+                                    },
+                                    "default_value": "padding-bottom-medium",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -3183,6 +3237,60 @@
                                             "parent_repeater": "field_65f97f24c46d9"
                                         }
                                     ]
+                                },
+                                {
+                                    "key": "field_6601797a7d1ad",
+                                    "label": "Padding Top",
+                                    "name": "padding_top",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "padding-top-large": "Groot",
+                                        "padding-top-medium": "Standaard",
+                                        "padding-top-small": "Klein"
+                                    },
+                                    "default_value": "padding-top-medium",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_660179bd7d1ae",
+                                    "label": "Padding Bottom",
+                                    "name": "padding_bottom",
+                                    "aria-label": "",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "padding-bottom-large": "Groot",
+                                        "padding-bottom-medium": "Standaard",
+                                        "padding-bottom-small": "Klein"
+                                    },
+                                    "default_value": "padding-bottom-medium",
+                                    "return_format": "value",
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -3431,5 +3539,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711018423
+    "modified": 1711372770
 }

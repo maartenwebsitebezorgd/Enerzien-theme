@@ -1,8 +1,10 @@
 <?php
 $group = get_sub_field('media_steps');
+$padding_top = !empty ($group['padding_top']) ? $group['padding_top'] : 'padding-top-medium';
+$padding_bottom = !empty ($group['padding_bottom']) ? $group['padding_bottom'] : 'padding-bottom-medium';
 ?>
 
-<section class="overflow-hidden padding-section-medium">
+<section class="overflow-hidden <?php echo $padding_top ?>  <?php echo $padding_bottom ?>">
   <div class="container">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:gap-24">
       <div class="w-full h-full flex items-center">

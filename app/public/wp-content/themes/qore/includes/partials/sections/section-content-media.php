@@ -1,8 +1,10 @@
 <?php
 $group = get_sub_field('content_media');
+$padding_top = !empty ($group['padding_top']) ? $group['padding_top'] : 'padding-top-medium';
+$padding_bottom = !empty ($group['padding_bottom']) ? $group['padding_bottom'] : 'padding-bottom-medium';
 ?>
 
-<section class="padding-section-medium">
+<section class="<?php echo $padding_top ?>  <?php echo $padding_bottom ?>">
     <div class="container">
         <div class="overflow-hidden bg-white">
             <div>

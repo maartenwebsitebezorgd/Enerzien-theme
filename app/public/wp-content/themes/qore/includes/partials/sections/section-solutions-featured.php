@@ -26,7 +26,6 @@ if (!empty ($group['choose_posts'])) {
 
 <section class="padding-section-medium">
     <div class="container">
-
         <div class="mb-16 flex max-w-2xl flex-col lg:max-w-3xl">
             <?php if (!empty ($group['subtitle'])): ?>
                 <h5 class="mb-4 text-sm font-bold uppercase tracking-widest text-emerald-600 sm:text-base">

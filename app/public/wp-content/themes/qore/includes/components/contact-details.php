@@ -11,19 +11,19 @@ $company = get_field('company', 'option');
     </span>
 </a>
 
-<?php if (is_page('contact')): ?>
-            <h4 class="text-lg text-primary font-bold font-manrope mb-2">Ben je in de buurt?</h4>
+<?php if (is_page('contact')) : ?>
+    <h4 class="text-lg text-primary font-bold font-manrope mb-2">Ben je in de buurt?</h4>
 <?php endif; ?>
 
-<?php if (!empty ($address)): ?>
-        <p class="font-manrope text-base-content">
-            <?php echo $address['street'] . ' ' . $address['housenumber']; ?><br>
-            <?php echo $address['zipcode'] . ' ' . $address['location']; ?>
-        </p>
+<?php if(!empty($address)): ?>
+<p class="font-manrope text-base-content">
+    <?php echo $address['street'] . ' ' . $address['housenumber']; ?><br>
+    <?php echo $address['zipcode'] . ' ' . $address['location']; ?>
+</p>
 <?php endif; ?>
 
-<?php if (is_page('contact')): ?>
-            <h4 class="text-lg text-primary font-bold font-manrope mb-2">Contact</h4>
+<?php if (is_page('contact')) : ?>
+    <h4 class="text-lg text-primary font-bold font-manrope mb-2">Contact</h4>
 <?php endif; ?>
 
 <ul class="mb-8 text-base font-manrope">
@@ -37,28 +37,28 @@ $company = get_field('company', 'option');
     </li>
 </ul>
 
-<?php if (is_page('contact')): ?>
-            <h4 class="text-lg text-primary font-bold font-manrope mb-2">Bedrijf</h4>
+<?php if (is_page('contact')) : ?>
+    <h4 class="text-lg text-primary font-bold font-manrope mb-2">Bedrijf</h4>
 <?php endif; ?>
 
 <ul class="mb-8 text-base font-manrope">
-    <?php if (!empty ($company['kvk'])): ?>
-            <li class="flex flex-row flex-wrap items-center justify-start">
-                <strong class="text-base-content font-extrabold mr-2">KVK:</strong>
-                <span><?php echo $company['kvk']; ?></span>
-            </li>
+    <?php if(!empty($company['kvk'])): ?>
+    <li class="flex flex-row flex-wrap items-center justify-start">
+        <strong class="text-base-content font-extrabold mr-2">KVK:</strong>
+        <span><?php echo $company['kvk']; ?></span>
+    </li>
     <?php endif; ?>
-    <?php if (!empty ($company['btw'])): ?>
-            <li class="flex flex-row flex-wrap items-center justify-start">
-                <strong class="text-base-content font-extrabold mr-2">BTW:</strong>
-                <span><?php echo $company['btw']; ?></span>
-            </li>
+    <?php if(!empty($company['btw'])): ?>
+    <li class="flex flex-row flex-wrap items-center justify-start">
+        <strong class="text-base-content font-extrabold mr-2">BTW:</strong>
+        <span><?php echo $company['btw']; ?></span>
+    </li>
     <?php endif; ?>
-    <?php if (!empty ($company['iban'])): ?>
-            <li class="flex flex-row flex-wrap items-center justify-start">
-                <strong class="text-base-content font-extrabold mr-2">IBAN:</strong>
-                <span><?php echo $company['iban']; ?></span>
-            </li>
+    <?php if(!empty($company['iban'])): ?>
+    <li class="flex flex-row flex-wrap items-center justify-start">
+        <strong class="text-base-content font-extrabold mr-2">IBAN:</strong>
+        <span><?php echo $company['iban']; ?></span>
+    </li>
     <?php endif; ?>
 </ul>
 <p class="font-manrope text-base mb-10">Volg Enerzien op <a href="<?php echo $company['linkedin']; ?>" target="_blank" class="link font-extrabold text-base-content underline">LinkedIn</a></p>
