@@ -18,12 +18,10 @@ $link = !empty ($footer['link']) ? $footer['link'] : [
 $socials_links = get_field('socials_links', 'option');
 ?>
 
-<!-- footer -->
-<footer class="bg-gray-800" aria-labelledby="footer-heading">
+<footer class="bg-gray-800 relative z-10" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="container pb-8 pt-16 sm:pt-24 lg:pt-28">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-            <!-- company info -->
             <div class="space-y-6">
                 <svg class="" height="38" viewBox="0 0 177 38" width="177" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -87,11 +85,8 @@ $socials_links = get_field('socials_links', 'option');
                     <?php endif ?>
                 </div>
             </div>
-            <!-- footer menus column-->
             <div class="mt-16 gap-8 xl:col-span-2 xl:mt-0">
-                <!-- footer menus layout-->
                 <div class="footer-menus grid grid-cols-2 gap-x-8 gap-y-16 md:grid-cols-4">
-                    <!-- footer menus link list -->
                     <div class="">
                         <h3 class="text-sm font-semibold leading-6 text-white">Wat We Doen</h3>
                         <ul role="list" class="mt-6 space-y-4">
@@ -106,7 +101,6 @@ $socials_links = get_field('socials_links', 'option');
                             ]); ?>
                         </ul>
                     </div>
-                    <!-- footer menus link list -->
                     <div class="">
                         <h3 class="text-sm font-semibold leading-6 text-white">Oplossingen</h3>
                         <ul role="list" class="mt-6 space-y-4">
@@ -121,7 +115,6 @@ $socials_links = get_field('socials_links', 'option');
                             ]); ?>
                         </ul>
                     </div>
-                    <!-- footer menus link list -->
                     <div class="">
                         <h3 class="text-sm font-semibold leading-6 text-white">Voor Wie</h3>
                         <ul role="list" class="mt-6 space-y-4">
@@ -136,7 +129,6 @@ $socials_links = get_field('socials_links', 'option');
                             ]); ?>
                         </ul>
                     </div>
-                    <!-- footer menus link list -->
                     <div class="">
                         <h3 class="text-sm font-semibold leading-6 text-white">Over Enerzien</h3>
                         <ul role="list" class="mt-6 space-y-4">
@@ -170,7 +162,6 @@ $socials_links = get_field('socials_links', 'option');
         </div>
     </div>
 </footer>
-<!-- end footer -->
 
 </div>
 

@@ -30,7 +30,7 @@ $post_meta_args = [
 
             <?php get_template_part('includes/partials/articles/post', 'meta', $post_meta_args); ?>
 
-            <h3 class="h4 text-base-content mb-6">
+            <h3 class="h5 text-base-content mb-5">
                 <span class="text-base-content">
                     <?php echo get_the_title(); ?>
                 </span>

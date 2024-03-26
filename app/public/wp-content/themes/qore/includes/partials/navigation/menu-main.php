@@ -116,12 +116,18 @@ $buttons = get_field('main_menu_links', 'option');
             </div>
         </div>
         <div class="hidden ml-auto md:flex gap-2">
-            <a href="<?php echo $buttons['link_1']; ?>"
-                class="rounded-md bg-stone-200 px-3.5 py-2.5 text-base font-semibold tracking-wide text-stone-900 shadow-sm hover:bg-stone-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-300">Werken
-                Bij</a>
-            <a href="<?php echo $buttons['link_2']; ?>"
-                class="rounded-md bg-emerald-600 px-3.5 py-2.5 text-base font-semibold tracking-wide text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">Gratis
-                Advies</a>
+            <?php if (!empty ($buttons['link_1']['url'])): ?>
+                <a title="<?php echo $buttons['link_1']['title']; ?>" href="<?php echo $buttons['link_1']['url']; ?>"
+                    class="rounded-md bg-stone-200 px-3.5 py-2.5 text-base font-semibold tracking-wide text-stone-900 shadow-sm hover:bg-stone-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-300">
+                    <?php echo $buttons['link_1']['title']; ?>
+                </a>
+            <?php endif ?>
+            <?php if (!empty ($buttons['link_2']['url'])): ?>
+                <a title="<?php echo $buttons['link_2']['title']; ?>" href="<?php echo $buttons['link_2']['url']; ?>"
+                    class="rounded-md bg-emerald-600 px-3.5 py-2.5 text-base font-semibold tracking-wide text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">
+                    <?php echo $buttons['link_2']['title']; ?>
+                </a>
+            <?php endif ?>
         </div>
         <div class="flex md:hidden ml-auto">
             <button type="button" class="toggle-menu-mobile btn btn-link !text-base-content p-0" aria-pressed="true">
@@ -145,4 +151,3 @@ $buttons = get_field('main_menu_links', 'option');
         </div>
     </div>
 </nav>
-<!-- end navigation -->
