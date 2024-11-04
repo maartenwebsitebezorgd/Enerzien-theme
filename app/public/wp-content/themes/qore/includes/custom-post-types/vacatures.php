@@ -1,7 +1,7 @@
 <?php
 
 $register_post_type_post_type = function () {
-    $post_type_name = 'vacatures'; // Wat wordt de naam van de post type?
+    $post_type_name = 'vacatures';
 
     register_post_type(
         $post_type_name,
@@ -42,7 +42,7 @@ $register_post_type_post_type = function () {
         ]
     );
 
-    register_taxonomy_for_object_type('category', $post_type_name, ); // Voeg categorieën toe -> Uit 'committen' om niet te gebruiken
+    //register_taxonomy_for_object_type('category', $post_type_name, ); // Voeg categorieën toe -> Uit 'committen' om niet te gebruiken
     // register_taxonomy_for_object_type('post_tag', $post_type_name, ); // Voeg tags toe -> Uit 'committen' om niet te gebruiken
 };
 

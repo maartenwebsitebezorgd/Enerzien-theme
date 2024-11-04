@@ -72,5 +72,8 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'offgrid_gallery') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'offgrid-gallery', $args);
+    } elseif (get_row_layout() === 'content_simple') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'content-simple', $args);
     }
 }

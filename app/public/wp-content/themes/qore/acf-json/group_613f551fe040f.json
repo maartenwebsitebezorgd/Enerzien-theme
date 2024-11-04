@@ -479,6 +479,35 @@
                     },
                     "default_value": "https:\/\/cdn.plyr.io\/static\/demo\/View_From_A_Blue_Moon_Trailer-576p.mp4",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_670fcdbc3e8cf",
+                    "label": "overlay opacity",
+                    "name": "overlay_opacity",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "opacity-10": "10",
+                        "opacity-20": "20",
+                        "opacity-40": "40",
+                        "opacity-50": "50",
+                        "opacity-100": "none"
+                    },
+                    "default_value": "opacity-20",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         }
@@ -509,7 +538,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "vacatures"
             }
         ]
     ],
@@ -522,5 +551,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711014129
+    "modified": 1730718630
 }

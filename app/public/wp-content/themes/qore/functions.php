@@ -46,3 +46,13 @@ include_once get_template_directory() . '/includes/functions/custom.php';
 
 // Set plugin data and improvements
 include_once get_template_directory() . '/includes/functions/plugins.php';
+
+function add_vacancy_templates($post_templates, $wp_theme, $post, $post_type)
+{
+    // Only add this template to vacancies post type
+    if ($post_type === 'vacatures') {
+        $post_templates['_pagebuilder.php'] = 'Page Builder';
+    }
+    return $post_templates;
+}
+add_filter('theme_templates', 'add_vacancy_templates', 10, 4);
