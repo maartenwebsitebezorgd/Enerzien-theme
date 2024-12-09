@@ -94,8 +94,8 @@ function generate_image_sizes()
 {
     $image_sizes = [
         'shape-image' => [
-            'width' => 608,
-            'height' => 689,
+            'width' => 1200,
+            'height' => 1280,
             'crop' => true,
             'retina' => true,
         ],
@@ -132,6 +132,18 @@ function generate_image_sizes()
         'cta' => [
             'width' => 640,
             'height' => 1240,
+            'crop' => true,
+            'retina' => false,
+        ],
+        'featured-team' => [
+            'width' => 900,
+            'height' => 1200,
+            'crop' => true,
+            'retina' => true,
+        ],
+        'shape-image-big' => [
+            'width' => 1280,
+            'height' => 1280,
             'crop' => true,
             'retina' => false,
         ],
@@ -269,15 +281,15 @@ function use_pagebuilder_template_by_default()
 
 function acf_flexible_content_collapse_on_load()
 { ?>
-                                        <script type="text/javascript">
-                                            (function($) {
-                                                jQuery(document).ready(function() {
-                                                    jQuery('.layout').addClass('-collapsed');
-                                                    jQuery('body.post-php .acf-postbox').addClass('closed');
-                                                });
-                                            })(jQuery);
-                                        </script>
-                                        <?php
+    <script type="text/javascript">
+        (function ($) {
+            jQuery(document).ready(function () {
+                jQuery('.layout').addClass('-collapsed');
+                jQuery('body.post-php .acf-postbox').addClass('closed');
+            });
+        })(jQuery);
+    </script>
+    <?php
 }
 
 function calculate_readtime($post_id = '')
@@ -416,18 +428,22 @@ function webrand_filter_function()
             echo '<hr class="my-10 border-base-200">' . $reset_btn;
         } ?>
 
-                                                                            <?php
+        <?php
     } else { ?>
 
-                                                                                <div class="no-results w-full py-10">
-                                                                                    <div class="mb-10">
-                                                                                        <h3 class="text-2xl leading-tight font-bold"><?php echo __('Geen resultaten', 'qore'); ?></h3>
-                                                                                        <p><?php echo __('Geen resultaten gevonden in combinatie met de door jouw gekozen filters', 'qore'); ?>.</p>
-                                                                                    </div>
-                                                                                    <?php echo $reset_btn; ?>
-                                                                                </div>
+        <div class="no-results w-full py-10">
+            <div class="mb-10">
+                <h3 class="text-2xl leading-tight font-bold">
+                    <?php echo __('Geen resultaten', 'qore'); ?>
+                </h3>
+                <p>
+                    <?php echo __('Geen resultaten gevonden in combinatie met de door jouw gekozen filters', 'qore'); ?>.
+                </p>
+            </div>
+            <?php echo $reset_btn; ?>
+        </div>
 
-                                    <?php }
+    <?php }
 
     wp_reset_query();
 

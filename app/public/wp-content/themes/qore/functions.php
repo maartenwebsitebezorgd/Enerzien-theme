@@ -56,3 +56,9 @@ function add_vacancy_templates($post_templates, $wp_theme, $post, $post_type)
     return $post_templates;
 }
 add_filter('theme_templates', 'add_vacancy_templates', 10, 4);
+
+add_filter('wp_calculate_image_sizes', 'customize_image_sizes', 10, 5);
+function customize_image_sizes($sizes, $size, $image_src, $image_meta, $attachment_id)
+{
+    return '(max-width: 1200px) 100vw, 1200px';
+}

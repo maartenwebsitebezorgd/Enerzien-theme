@@ -1,27 +1,26 @@
 <?php
 $group = get_sub_field('media_steps');
-$padding_top = !empty ($group['padding_top']) ? $group['padding_top'] : 'padding-top-medium';
-$padding_bottom = !empty ($group['padding_bottom']) ? $group['padding_bottom'] : 'padding-bottom-medium';
+$padding_top = !empty($group['padding_top']) ? $group['padding_top'] : 'padding-top-medium';
+$padding_bottom = !empty($group['padding_bottom']) ? $group['padding_bottom'] : 'padding-bottom-medium';
 ?>
 
 <section class="overflow-hidden <?php echo $padding_top ?>  <?php echo $padding_bottom ?>">
   <div class="container">
     <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:gap-24">
-      <div class="w-full h-full flex items-center">
-        <div
-          class="w-full transform overflow-hidden rounded-md transition duration-1000 ease-in-out hover:-translate-y-4 mask mask-hexagon aspect-[1/1]">
-          <?php if (!empty ($group['main_image'])): ?>
-            <?php echo wp_get_attachment_image($group['main_image']['ID'], 'shape-image', false, ['class' => 'w-full h-full object-cover']); ?>
+      <div class="w-full items-center">
+        <div class="relative w-full mask mask-hexagon transition duration-1000 ease-in-out hover:-translate-y-4">
+          <?php if (!empty($group['main_image'])): ?>
+            <?php echo wp_get_attachment_image($group['main_image']['ID'], 'shape-image', false, ['class' => 'w-full']); ?>
           <?php endif; ?>
         </div>
       </div>
       <div class="w-full">
-        <?php if (!empty ($group['subtitle'])): ?>
+        <?php if (!empty($group['subtitle'])): ?>
           <h2 class="subtitle">
             <?php echo $group['subtitle']; ?>
           </h2>
         <?php endif; ?>
-        <?php if (!empty ($group['title'])): ?>
+        <?php if (!empty($group['title'])): ?>
           <h2 class="h2 mb-12 md:mb-12 md:max-w-lg">
             <?php echo $group['title']; ?>
           </h2>
@@ -38,12 +37,12 @@ $padding_bottom = !empty ($group['padding_bottom']) ? $group['padding_bottom'] :
               </div>
               <div class="flex-1 p-6">
                 <div class="md:max-w-xs">
-                  <?php if (!empty ($group['heading_1'])): ?>
+                  <?php if (!empty($group['heading_1'])): ?>
                     <h3 class="h5">
                       <?php echo $group['heading_1']; ?>
                     </h3>
                   <?php endif; ?>
-                  <?php if (!empty ($group['text_1'])): ?>
+                  <?php if (!empty($group['text_1'])): ?>
                     <p class="leading-relaxed text-gray-700">
                       <?php echo $group['text_1']; ?>
                     </p>
@@ -63,12 +62,12 @@ $padding_bottom = !empty ($group['padding_bottom']) ? $group['padding_bottom'] :
               </div>
               <div class="flex-1 p-6">
                 <div class="md:max-w-xs">
-                  <?php if (!empty ($group['heading_2'])): ?>
+                  <?php if (!empty($group['heading_2'])): ?>
                     <h3 class="h5">
                       <?php echo $group['heading_2']; ?>
                     </h3>
                   <?php endif; ?>
-                  <?php if (!empty ($group['text_2'])): ?>
+                  <?php if (!empty($group['text_2'])): ?>
                     <p class="leading-relaxed text-gray-700">
                       <?php echo $group['text_2']; ?>
                     </p>
@@ -86,12 +85,12 @@ $padding_bottom = !empty ($group['padding_bottom']) ? $group['padding_bottom'] :
               </div>
               <div class="flex-1 p-6">
                 <div class="md:max-w-xs">
-                  <?php if (!empty ($group['heading_3'])): ?>
+                  <?php if (!empty($group['heading_3'])): ?>
                     <h3 class="h5">
                       <?php echo $group['heading_3']; ?>
                     </h3>
                   <?php endif; ?>
-                  <?php if (!empty ($group['text_3'])): ?>
+                  <?php if (!empty($group['text_3'])): ?>
                     <p class="leading-relaxed text-gray-700">
                       <?php echo $group['text_3']; ?>
                     </p>

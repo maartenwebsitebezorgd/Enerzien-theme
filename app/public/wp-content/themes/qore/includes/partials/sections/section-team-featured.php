@@ -42,7 +42,7 @@ if (!empty($repeater)):
                                 <div team-media class="relative w-full overflow-hidden">
                                     <?php if ($lid['image']): ?>
                                         <div class="aspect-[3/4]">
-                                            <?php echo wp_get_attachment_image($lid['image']['ID'], 'full', false, ['class' => 'h-full w-full object-cover']); ?>
+                                            <?php echo wp_get_attachment_image($lid['image']['ID'], 'featured-team', false, ['class' => 'h-full w-full object-cover']); ?>
                                         </div>
                                     <?php endif; ?>
                                 </div>
@@ -128,21 +128,29 @@ if (!empty($repeater)):
                 centeredSlides: false,
                 direction: 'horizontal',
                 loopFillGroupWithBlank: true,
-                spaceBetween: 24,
+                spaceBetween: 12,
                 loop: false,
-                slidesPerView: 1,
+                slidesPerView: 1.1,
                 breakpoints: {
+                    480: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 12,
+                    },
                     768: {
-                        slidesPerView: 2,
+                        slidesPerView: 2.2,
+                        spaceBetween: 16,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 3.2,
+                        spaceBetween: 24,
                     },
                     1280: {
-                        slidesPerView: 3.5,
+                        slidesPerView: 3.2,
+                        spaceBetween: 24,
                     },
                     1446: {
-                        slidesPerView: <?php echo $amount; ?>,
+                        slidesPerView: 3,
+                        spaceBetween: 24,
                     },
                 },
                 navigation: {
