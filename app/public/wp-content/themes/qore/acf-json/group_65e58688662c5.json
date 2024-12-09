@@ -1,13 +1,13 @@
 {
-    "key": "group_615ad93246ff8",
-    "title": "Share",
+    "key": "group_65e58688662c5",
+    "title": "Menu",
     "fields": [
         {
-            "key": "field_615ad939c995f",
-            "label": "Share tonen?",
-            "name": "show_share",
+            "key": "field_65e58688c9b77",
+            "label": "Beschrijving",
+            "name": "description",
             "aria-label": "",
-            "type": "true_false",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,31 +16,24 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "Description or other content here.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "nav_menu_item",
                 "operator": "==",
-                "value": "post"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "projecten"
+                "value": "location\/menu-main"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",

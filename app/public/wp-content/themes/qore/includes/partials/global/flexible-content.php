@@ -9,9 +9,6 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() == 'projects') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'projects', $args);
-    } elseif (get_row_layout() == 'team') {
-        $args = [];
-        get_template_part('includes/partials/sliders/slider', 'team', $args);
     } elseif (get_row_layout() == 'themes') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'relation', $args);
@@ -63,5 +60,20 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'partners_slider') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'partners-slider', $args);
+    } elseif (get_row_layout() === 'uitgelichte_vacatures') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'uitgelichte-vacatures', $args);
+    } elseif (get_row_layout() === 'media_steps') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'media-steps', $args);
+    } elseif (get_row_layout() === 'content_media') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'content-media', $args);
+    } elseif (get_row_layout() === 'offgrid_gallery') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'offgrid-gallery', $args);
+    } elseif (get_row_layout() === 'content_simple') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'content-simple', $args);
     }
 }

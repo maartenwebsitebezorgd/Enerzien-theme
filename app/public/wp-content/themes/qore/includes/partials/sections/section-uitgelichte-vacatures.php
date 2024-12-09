@@ -3,13 +3,13 @@
 global $post;
 
 $posts = '';
-$group = !empty (get_sub_field('projects')) ? get_sub_field('projects') : $args;
+$group = !empty (get_sub_field('vacatures')) ? get_sub_field('vacatures') : $args;
 
 if (!empty ($group['choose_posts'])) {
     $posts = $group['choose_posts'];
 } else {
     $query_args = [
-        'post_type' => 'project',
+        'post_type' => 'vacatures',
         'post_status' => 'publish',
         'posts_per_page' => 3,
         'post__not_in' => array($post->ID),
@@ -24,7 +24,7 @@ if (!empty ($group['choose_posts'])) {
 
 ?>
 
-<div class="bg-gray-800 padding-section-large">
+<div class="padding-section-medium">
     <div class="container">
         <div class="mx-auto mb-16 max-w-2xl text-center lg:max-w-3xl">
             <?php if (!empty ($group['subtitle'])): ?>
@@ -33,12 +33,12 @@ if (!empty ($group['choose_posts'])) {
                 </h5>
             <?php endif; ?>
             <?php if (!empty ($group['title'])): ?>
-                <h2 class="text-pretty text-3xl font-bold text-white sm:text-4xl lg:text-5xl leading-xtight">
+                <h2 class="text-pretty text-3xl font-bold sm:text-4xl lg:text-5xl leading-xtight">
                     <?php echo $group['title']; ?>
                 </h2>
             <?php endif; ?>
             <?php if (!empty ($group['text'])): ?>
-                <div class="mt-5 text-pretty text-lg text-white lg:text-xl">
+                <div class="mt-5 text-pretty text-lg lg:text-xl">
                     <?php echo the_content_more($group['text']); ?>
                 </div>
             <?php endif; ?>
@@ -52,12 +52,14 @@ if (!empty ($group['choose_posts'])) {
                 'views' => 'true',
             ]; ?>
 
-            <div class="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-5 lg:gap-6">
-                <?php
-                foreach ($posts as $post) {
-                    get_template_part('includes/partials/projects/project', 'post');
-                }
-                wp_reset_postdata(); ?>
+            <div class="mx-auto mb-16 max-w-2xl lg:max-w-3xl">
+                <div class="grid grid-cols-1 items-stretch gap-6">
+                    <?php
+                    foreach ($posts as $post) {
+                        get_template_part('includes/partials/vacatures/vacature', 'post');
+                    }
+                    wp_reset_postdata(); ?>
+                </div>
             </div>
             <?php
         } ?>

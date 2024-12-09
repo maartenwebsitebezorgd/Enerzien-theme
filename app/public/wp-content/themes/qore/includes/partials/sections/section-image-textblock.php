@@ -1,9 +1,11 @@
 <?php
 $group = get_sub_field('image_textblock');
 $align = !empty($group['align']) ? $group['align'] : 'items-start';
+$padding_top = !empty($group['padding_top']) ? $group['padding_top'] : 'padding-top-medium';
+$padding_bottom = !empty($group['padding_bottom']) ? $group['padding_bottom'] : 'padding-bottom-medium';
 ?>
 
-<section class="padding-section-medium">
+<section class=" <?php echo $padding_top ?>  <?php echo $padding_bottom ?>">
     <div class="container">
         <div class="grid grid-cols-1 items-center justify-items-center gap-12 md:gap-20 md:grid-cols-2">
             <div>
@@ -13,12 +15,12 @@ $align = !empty($group['align']) ? $group['align'] : 'items-start';
                     </h5>
                 <?php endif; ?>
                 <?php if (!empty($group['title'])): ?>
-                    <h2 class="text-pretty text-2xl font-bold sm:text-3xl lg:text-4xl leading-xtight">
+                    <h2 class="text-pretty h3">
                         <?php echo $group['title']; ?>
                     </h2>
                 <?php endif; ?>
                 <?php if (!empty($group['text'])): ?>
-                    <div class="mt-5 text-pretty text-lg lg:text-xl">
+                    <div class="mt-5 text-pretty text-base md:text-lg lg:text-xl">
                         <?php echo the_content_more($group['text']); ?>
                     </div>
                 <?php endif; ?>
@@ -43,10 +45,12 @@ $align = !empty($group['align']) ? $group['align'] : 'items-start';
                 </div>
             </div>
             <div class="<?php echo $group['image_right'] == true ? 'order-last' : 'order-first'; ?>">
-                <div class="relative aspect-[1/1] w-full mask mask-hexagon">
-                    <?php if (!empty($group['image'])): ?>
-                        <?php echo wp_get_attachment_image($group['image']['ID'], 'shape-image', false, ['class' => 'w-full h-full']); ?>
-                    <?php endif; ?>
+                <div>
+                    <div class="mask mask-hexagon ">
+                        <?php if (!empty($group['image'])): ?>
+                            <?php echo wp_get_attachment_image($group['image']['ID'], 'shape-image', false, ['class' => 'object-cover w-full']); ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>

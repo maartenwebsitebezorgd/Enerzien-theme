@@ -8,3 +8,7 @@
 	License URI: -
 	Text Domain: Theme
 */
+
+.footer-menus a {
+ color: white!important;
+}

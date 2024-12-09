@@ -55,7 +55,7 @@ $avatar = !empty(get_field('avatar', 'user_' . $author_id)) ? wp_get_attachment_
                         <span><?php echo __('Terug naar het overzicht', 'qore'); ?></span>
                     </a>
 
-                    <h1 class="hero-title h1 mb-4">
+                    <h1 class="hero-title h2 mb-4">
                         <?php echo !empty($group['titel']) ? $group['titel'] : $title; ?>
                     </h1>
 

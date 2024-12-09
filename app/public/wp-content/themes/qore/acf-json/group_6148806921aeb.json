@@ -6,6 +6,7 @@
             "key": "field_6148806c74d06",
             "label": "Links",
             "name": "links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -20,11 +21,13 @@
             "max": 0,
             "layout": "block",
             "button_label": "Link toevoegen",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_6148808674d07",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -34,7 +37,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_6148806c74d06"
                 }
             ]
         }
@@ -58,5 +62,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1632141503
+    "show_in_rest": false,
+    "modified": 1709542263
 }

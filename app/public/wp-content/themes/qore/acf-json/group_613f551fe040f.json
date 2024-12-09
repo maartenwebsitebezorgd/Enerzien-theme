@@ -34,13 +34,14 @@
                     },
                     "choices": {
                         "basic": "Standaard",
-                        "large": "Uitgebreid"
+                        "large": "Uitgebreid",
+                        "video": "Video"
                     },
+                    "default_value": "basic",
+                    "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
-                    "default_value": "basic",
                     "layout": "horizontal",
-                    "return_format": "value",
                     "save_other_choice": 0
                 },
                 {
@@ -151,6 +152,13 @@
                                 "operator": "==",
                                 "value": "large"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "video"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -222,10 +230,10 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_613f551feaa3f",
@@ -241,6 +249,13 @@
                                 "field": "field_613f551fea98b",
                                 "operator": "==",
                                 "value": "large"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_613f551fea98b",
+                                "operator": "==",
+                                "value": "video"
                             }
                         ]
                     ],
@@ -447,6 +462,52 @@
                     "max": 6,
                     "return_format": "object",
                     "bidirectional_target": []
+                },
+                {
+                    "key": "field_65f9a76544005",
+                    "label": "Video Source",
+                    "name": "video_src",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/cdn.plyr.io\/static\/demo\/View_From_A_Blue_Moon_Trailer-576p.mp4",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_670fcdbc3e8cf",
+                    "label": "overlay opacity",
+                    "name": "overlay_opacity",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "opacity-10": "10",
+                        "opacity-20": "20",
+                        "opacity-40": "40",
+                        "opacity-50": "50",
+                        "opacity-100": "none"
+                    },
+                    "default_value": "opacity-20",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         }
@@ -477,7 +538,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "vacatures"
             }
         ]
     ],
@@ -490,5 +551,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706187666
+    "modified": 1730718630
 }
