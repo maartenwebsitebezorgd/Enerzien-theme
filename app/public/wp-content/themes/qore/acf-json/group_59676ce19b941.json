@@ -3580,6 +3580,54 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67598973a808a": {
+                    "key": "layout_67598973a808a",
+                    "name": "featured_services",
+                    "label": "Featured services",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_675989cda808d",
+                            "label": "",
+                            "name": "featured_services",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_67598a25a808e",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "This is my starter title to test",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -3614,5 +3662,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730717426
+    "modified": 1733922994
 }
