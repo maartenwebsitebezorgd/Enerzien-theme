@@ -5,7 +5,7 @@ $group = get_sub_field('testimonials');
 <?php if (!empty($group['choose_posts'])) : ?>
     <section class="mx-auto py-20 bg-white target-viewport w-full items-center" id="slider-testmonials-<?php the_ID(); ?>">
         <div class="container mx-auto relative pl-4 lg:pl-10">
-            <div class="w-full flex flex-col lg:flex-row flex-nowrap justify-center lg:justify-between text-base-content items-center text-center lg:text-left 2xl:gap-40">
+            <div class="w-full flex flex-col lg:flex-row flex-nowrap justify-center lg:justify-between text-base-content items-center text-center lg:text-left 2xl:gap-6">
 
                 <div class="flex flex-col w-full sm:max-w-sm">
                     <h2 class="h2"><?php echo __('Reviews', 'qore'); ?></h2>
@@ -15,7 +15,7 @@ $group = get_sub_field('testimonials');
                 </div>
 
                 <!-- Carousel content -->
-                <div class="slider-testmonials w-full swiper-container overflow-hidden pt-0 lg:pt-10 pb-10 lg:pb-20 text-center">
+                <div class="slider-testmonials w-full swiper-container overflow-hidden px-3 pt-0 lg:pt-10 pb-10 lg:pb-20 text-center">
                     <div class="swiper-wrapper w-full max-w-2xl">
                         <?php $i = 0;
                         foreach ($group['choose_posts'] as $post) {
@@ -83,7 +83,7 @@ $group = get_sub_field('testimonials');
                 slidesPerView: 'auto',
                 autoHeight: true,
                 direction: 'horizontal',
-                spaceBetween: 40,
+                spaceBetween: 32,
                 loop: true,
                 coverflowEffect: {
                     rotate: 0,

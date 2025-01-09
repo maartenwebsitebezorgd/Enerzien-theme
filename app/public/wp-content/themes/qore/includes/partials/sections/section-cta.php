@@ -2,7 +2,6 @@
 $group = !empty(get_sub_field('cta')) ? get_sub_field('cta') : get_field('footer_cta', 9);
 ?>
 
-<!-- cta banner -->
 <div class="padding-section-small">
     <div class="container">
         <div
@@ -63,4 +62,3 @@ $group = !empty(get_sub_field('cta')) ? get_sub_field('cta') : get_field('footer
         </div>
     </div>
 </div>
-<!-- end cta banner -->

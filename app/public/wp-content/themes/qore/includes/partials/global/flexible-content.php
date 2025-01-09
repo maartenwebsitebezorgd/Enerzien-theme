@@ -15,6 +15,9 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() == 'testimonials') {
         $args = [];
         get_template_part('includes/partials/sliders/slider', 'testimonials', $args);
+    } elseif (get_row_layout() == 'testimonials_wall') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'testimonials-wall', $args);
     } elseif (get_row_layout() == 'partners') {
         $args = [];
         get_template_part('includes/partials/sliders/slider', 'partners', $args);
@@ -39,6 +42,9 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'cta') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'cta', $args);
+    } elseif (get_row_layout() === 'cta_simple') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'cta-simple', $args);
     } elseif (get_row_layout() === 'form') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'form', $args);
@@ -78,5 +84,11 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'featured_services') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'featured-services', $args);
+    } elseif (get_row_layout() === 'project_summary') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'project-summary', $args);
+    } elseif (get_row_layout() === 'quote') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'quote', $args);
     }
 }

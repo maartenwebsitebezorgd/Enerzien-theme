@@ -839,10 +839,10 @@
 
     .slider-testmonials {
         .swiper-slide {
-            @apply blur-sm opacity-90;
+            @apply blur-sm opacity-90 transition-shadow;
         }
         .swiper-slide-active {
-            @apply shadow border;
+            @apply !blur-0 !opacity-100 shadow-sm border;
         }
     }
 

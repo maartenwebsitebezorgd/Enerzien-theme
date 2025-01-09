@@ -2,7 +2,7 @@
 
 /*
 Template Name: Page builder
-Template Post Type: post, page
+Template Post Type: post, page, projecten
 */
 
 get_header();
