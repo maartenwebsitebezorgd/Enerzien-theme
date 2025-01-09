@@ -5,13 +5,13 @@ $padding_bottom = !empty($group['padding_bottom']) ? $group['padding_bottom'] : 
 ?>
 
 <section class="<?php echo $padding_top ?>  <?php echo $padding_bottom ?>">
-    <div class="mx-auto mt-32 max-w-7xl sm:mt-40 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div
             class="relative isolate overflow-hidden bg-[#055] px-6 py-16 text-center shadow-2xl sm:rounded-3xl sm:px-16">
             <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 <?php echo $group['title']; ?>
             </h2>
-            <div class="mx-auto mt-6 max-w-2xl text-white prose-xl text-pretty">
+            <div class="mx-auto mt-6 max-w-2xl text-white prose-lg text-pretty">
                 <?php echo $group['body']; ?>
             </div>
 

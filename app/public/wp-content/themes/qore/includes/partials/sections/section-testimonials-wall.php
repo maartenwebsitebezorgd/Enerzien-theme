@@ -69,6 +69,25 @@
                             </figcaption>
                         </figure>
 
+                        <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+                            <blockquote class="text-gray-900 !p-0 !m-0">
+                                <p class="">“Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil.
+                                    Aut
+                                    enim
+                                    doloremque et ipsam.”</p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center gap-x-4">
+                                <img class="size-10 rounded-full bg-gray-50"
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="">
+                                <div>
+                                    <div class="font-semibold">Leslie Alexander</div>
+                                    <div class="text-gray-600">@lesliealexander</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+
                         <!-- More testimonials... -->
                     </div>
                     <div class="space-y-8 xl:row-start-1">
@@ -113,6 +132,22 @@
                         <!-- More testimonials... -->
                     </div>
                     <div class="space-y-8 xl:row-span-2">
+                        <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
+                            <blockquote class="text-gray-900 text-gray-900 !p-0 !m-0">
+                                <p>“Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt
+                                    excepturi rerum voluptatem minus harum.”</p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center gap-x-4">
+                                <img class="size-10 rounded-full bg-gray-50"
+                                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="">
+                                <div>
+                                    <div class="font-semibold">Leonard Krasner</div>
+                                    <div class="text-gray-600">@leonardkrasner</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+
                         <figure class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5">
                             <blockquote class="text-gray-900 text-gray-900 !p-0 !m-0">
                                 <p>“Molestias ea earum quos nostrum doloremque sed. Quaerat quasi aut velit incidunt

@@ -24,7 +24,7 @@ $padding_bottom = !empty($group['padding_bottom']) ? $group['padding_bottom'] : 
                 </div>
                 <?php if (!empty($group['image'])): ?>
                     <div class="col-end-1 w-16 lg:row-span-4 lg:w-72 aspect-square relative overflow-clip rounded-2xl">
-                        <?php echo wp_get_attachment_image($group['image']['ID'], 'shape-image', false, ['class' => 'w-full h-full']); ?>
+                        <?php echo wp_get_attachment_image($group['image']['ID'], 'shape-image', false, ['class' => 'w-full h-full object-cover']); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (!empty($group['name'])): ?>
