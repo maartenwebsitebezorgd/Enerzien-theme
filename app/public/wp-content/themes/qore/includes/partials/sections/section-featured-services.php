@@ -82,7 +82,7 @@ $padding_bottom = !empty($group['padding_bottom']) ? $group['padding_bottom'] : 
             },
             1446: {
                 slidesPerView: 4,
-                spaceBetween: 24,
+                spaceBetween: 16,
             },
         },
         navigation: {
