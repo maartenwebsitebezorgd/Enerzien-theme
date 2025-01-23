@@ -105,6 +105,94 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6762bcb32640e": {
+                    "key": "layout_6762bcb32640e",
+                    "name": "text_test",
+                    "label": "Tekstblock (test)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6762bcb32640f",
+                            "label": "field label test",
+                            "name": "field name test",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6762bcb326410",
+                                    "label": "in title test",
+                                    "name": "in field name test",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Laat leeg om niet te tonen",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6762bcb326411",
+                                    "label": "Titel",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6762bcb326412",
+                                    "label": "Tekst",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_612f947709445": {
                     "key": "layout_612f947709445",
                     "name": "textblock_two_columns",
@@ -3580,6 +3668,72 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_67920b5f88ca4": {
+                    "key": "layout_67920b5f88ca4",
+                    "name": "vidstack_video",
+                    "label": "Video Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67921f49d7614",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67921f5cd7615",
+                            "label": "Subtitle",
+                            "name": "subtitle",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_67921f6ad7616",
+                            "label": "Video url",
+                            "name": "video_url",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -3614,5 +3768,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730717426
+    "modified": 1737636249
 }
