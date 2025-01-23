@@ -3669,18 +3669,18 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_67920b5f88ca4": {
-                    "key": "layout_67920b5f88ca4",
+                "layout_67927aa6bccbc": {
+                    "key": "layout_67927aa6bccbc",
                     "name": "vidstack_video",
-                    "label": "Video Section",
+                    "label": "Section video",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_67921f49d7614",
-                            "label": "Title",
-                            "name": "title",
+                            "key": "field_67927aa6bccbd",
+                            "label": "Video",
+                            "name": "vidstack_video",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -3689,47 +3689,65 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_67921f5cd7615",
-                            "label": "Subtitle",
-                            "name": "subtitle",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_67921f6ad7616",
-                            "label": "Video url",
-                            "name": "video_url",
-                            "aria-label": "",
-                            "type": "link",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "url"
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_67927aeabccc0",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_67927af6bccc1",
+                                    "label": "Subtitle",
+                                    "name": "subtitle",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_67927afdbccc2",
+                                    "label": "Video URL",
+                                    "name": "video_url",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -3768,5 +3786,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737636249
+    "modified": 1737653208
 }
