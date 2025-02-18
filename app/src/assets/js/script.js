@@ -181,3 +181,117 @@ jQuery(function ($) {
   stickyNav();
   targetViewport();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const postsGrid = document.getElementById('posts-grid');
+  const paginationContainer = document.querySelector('.pagination');
+  const filterInputs = document.querySelectorAll('input[data-filter]');
+  let isLoading = false;
+
+  async function loadPosts(category, page = 1) {
+      if (isLoading) return;
+      isLoading = true;
+
+      // Show loading state
+      if (postsGrid) {
+          postsGrid.classList.add('opacity-50');
+      }
+
+      const formData = new FormData();
+      formData.append('action', 'load_filtered_posts');
+      formData.append('nonce', categoryFilter.nonce);
+      formData.append('category', category);
+      formData.append('page', page);
+
+      try {
+          const response = await fetch(categoryFilter.ajaxurl, {
+              method: 'POST',
+              body: formData,
+              credentials: 'same-origin'
+          });
+
+          if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const data = await response.json();
+
+          if (data.success && postsGrid) {
+              // Update posts
+              postsGrid.innerHTML = data.data.posts;
+
+              // Update pagination if it exists
+              if (paginationContainer && data.data.pagination) {
+                  paginationContainer.innerHTML = data.data.pagination.join('');
+                  setupPaginationListeners();
+              }
+
+              // Update URL without reload
+              const url = new URL(window.location);
+              if (category && category !== 'all') {
+                  url.searchParams.set('category', category);
+              } else {
+                  url.searchParams.delete('category');
+              }
+              if (page > 1) {
+                  url.searchParams.set('paged', page);
+              } else {
+                  url.searchParams.delete('paged');
+              }
+              window.history.pushState({}, '', url);
+
+              // Smooth scroll to top of posts grid
+              postsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+      } catch (error) {
+          console.error('Error loading posts:', error);
+      } finally {
+          if (postsGrid) {
+              postsGrid.classList.remove('opacity-50');
+          }
+          isLoading = false;
+      }
+  }
+
+  function setupPaginationListeners() {
+      const paginationLinks = document.querySelectorAll('.pagination a');
+      paginationLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const pageNum = this.href.match(/page(?:d)?\/(\d+)/)?.[1] 
+                  || this.href.match(/paged=(\d+)/)?.[1] 
+                  || 1;
+              const activeFilter = document.querySelector('input[data-filter]:checked');
+              if (activeFilter) {
+                  loadPosts(activeFilter.value, pageNum);
+              }
+          });
+      });
+  }
+
+  // Set up filter listeners
+  filterInputs.forEach(input => {
+      input.addEventListener('change', function() {
+          loadPosts(this.value, 1);
+      });
+  });
+
+  // Initial pagination setup
+  setupPaginationListeners();
+
+  // Handle browser back/forward buttons
+  window.addEventListener('popstate', function() {
+      const url = new URL(window.location);
+      const category = url.searchParams.get('category') || 'all';
+      const page = url.searchParams.get('paged') || 1;
+      
+      // Update radio button
+      const radioButton = document.querySelector(`input[data-filter="${category}"]`);
+      if (radioButton) {
+          radioButton.checked = true;
+      }
+      
+      loadPosts(category, page);
+  });
+});

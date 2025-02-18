@@ -48,7 +48,8 @@ module.exports = {
         'primary-tint': '#1cc6a5',
       },
       screens: {
-        xs: '415px', // = 375px
+        xs: '415px', // = 415px
+        s: '480px', // = 480px
         sm: '680px', // = 640px
         md: '768px', // = 768px
         lg: '1024px', // = 1024px

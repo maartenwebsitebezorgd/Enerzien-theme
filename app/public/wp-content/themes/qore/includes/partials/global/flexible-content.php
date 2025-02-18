@@ -83,7 +83,7 @@ while (have_rows('content_blocks')) {
         get_template_part('includes/partials/sections/section', 'content-simple', $args);
     } elseif (get_row_layout() === 'vidstack_video') {
         $args = [];
-        get_template_part('includes/partials/sections/section', 'vidstack-video', $args); 
+        get_template_part('includes/partials/sections/section', 'vidstack-video', $args);
     } elseif (get_row_layout() === 'featured_services') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'featured-services', $args);
@@ -96,5 +96,8 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'video_swiper') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'video-swiper', $args);
+    } elseif (get_row_layout() === 'highlighted_posts') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'highlighted-posts', $args);
     }
 }

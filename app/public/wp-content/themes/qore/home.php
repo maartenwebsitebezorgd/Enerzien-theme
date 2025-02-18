@@ -133,8 +133,6 @@ $categories = get_categories($categories_args); //This returns both used and unu
 
     <?php endif; ?>
 
-    <?php get_template_part('includes/partials/sections/section', 'cta'); ?>
-
 </main>
 
 <?php get_footer();
