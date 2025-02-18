@@ -81,6 +81,9 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'content_simple') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'content-simple', $args);
+    } elseif (get_row_layout() === 'vidstack_video') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'vidstack-video', $args); 
     } elseif (get_row_layout() === 'featured_services') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'featured-services', $args);
