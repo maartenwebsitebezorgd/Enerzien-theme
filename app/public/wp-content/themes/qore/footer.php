@@ -7,9 +7,9 @@ $footer = get_field('footer', 'option');
 
 
 
-$text = !empty ($footer['text']) ? $footer['text'] : 'Dé onafhankelijk architect van een slim energiesysteem.';
+$text = !empty($footer['text']) ? $footer['text'] : 'Dé onafhankelijk architect van een slim energiesysteem.';
 
-$link = !empty ($footer['link']) ? $footer['link'] : [
+$link = !empty($footer['link']) ? $footer['link'] : [
     'title' => 'Neem contact op',
     'target' => '_self',
     'url' => esc_url(home_url('/contact/')),
@@ -32,7 +32,7 @@ $socials_links = get_field('socials_links', 'option');
                     <?php echo $text ?>
                 </p>
                 <div class="flex space-x-6">
-                    <?php if (!empty ($socials_links['linkedin'])): ?>
+                    <?php if (!empty($socials_links['linkedin'])): ?>
                         <a href="<?php echo $socials_links['linkedin']; ?>" class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">LinkedIn</span>
                             <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ $socials_links = get_field('socials_links', 'option');
                             </svg>
                         </a>
                     <?php endif ?>
-                    <?php if (!empty ($socials_links['facebook'])): ?>
+                    <?php if (!empty($socials_links['facebook'])): ?>
                         <a href="<?php echo $socials_links['facebook']; ?>" class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">Facebook</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -54,7 +54,7 @@ $socials_links = get_field('socials_links', 'option');
                             </svg>
                         </a>
                     <?php endif ?>
-                    <?php if (!empty ($socials_links['instagram'])): ?>
+                    <?php if (!empty($socials_links['instagram'])): ?>
                         <a href="<?php echo $socials_links['instagram']; ?>" class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">Instagram</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -64,7 +64,7 @@ $socials_links = get_field('socials_links', 'option');
                             </svg>
                         </a>
                     <?php endif ?>
-                    <?php if (!empty ($socials_links['twitter'])): ?>
+                    <?php if (!empty($socials_links['twitter'])): ?>
                         <a href="<?php echo $socials_links['twitter']; ?>" class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">Twitter</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -73,7 +73,7 @@ $socials_links = get_field('socials_links', 'option');
                             </svg>
                         </a>
                     <?php endif ?>
-                    <?php if (!empty ($socials_links['youtube'])): ?>
+                    <?php if (!empty($socials_links['youtube'])): ?>
                         <a href="<?php echo $socials_links['youtube']; ?>" class="text-gray-500 hover:text-gray-400">
                             <span class="sr-only">YouTube</span>
                             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -167,6 +167,14 @@ $socials_links = get_field('socials_links', 'option');
 
 <?php wp_footer(); ?>
 
+<!-- GSPAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- Start page functions -->
+<script>
+    pageFunctions.executeFunctions();
+</script>
 </body>
 
 </html>

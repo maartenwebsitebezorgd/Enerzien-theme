@@ -90,5 +90,8 @@ while (have_rows('content_blocks')) {
     } elseif (get_row_layout() === 'quote') {
         $args = [];
         get_template_part('includes/partials/sections/section', 'quote', $args);
+    } elseif (get_row_layout() === 'video_swiper') {
+        $args = [];
+        get_template_part('includes/partials/sections/section', 'video-swiper', $args);
     }
 }

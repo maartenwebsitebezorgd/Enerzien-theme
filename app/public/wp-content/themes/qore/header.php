@@ -1,5 +1,5 @@
 <?php
-$body_class = !empty ($_GET['submit']) && $_GET['submit'] == 'true' ? 'loading relative bg-white modal-open' : 'loading relative bg-white';
+$body_class = !empty($_GET['submit']) && $_GET['submit'] == 'true' ? 'loading relative bg-white modal-open' : 'loading relative bg-white';
 $wrapper_class = is_page('contact') ? 'relative pt-18 overflow-hidden' : 'relative pt-18';
 ?>
 
@@ -12,6 +12,10 @@ $wrapper_class = is_page('contact') ? 'relative pt-18 overflow-hidden' : 'relati
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php wp_head(); ?>
+
+    <script>
+        (function (global) { global.pageFunctions = global.pageFunctions || { executed: {}, functions: {}, addFunction: function (id, fn) { if (!this.functions[id]) this.functions[id] = fn }, executeFunctions: function () { if (this.added) return; this.added = true; for (const id in this.functions) { if (!this.executed[id]) { try { this.functions[id](); this.executed[id] = true } catch (e) { console.error(`Error executing function ${id}:`, e) } } } } } })(window);
+    </script>
 
     <!-- Favicons -->
     <?php get_template_part('includes/components/favicons'); ?>
@@ -47,6 +51,10 @@ $wrapper_class = is_page('contact') ? 'relative pt-18 overflow-hidden' : 'relati
             }
         }
     </style>
+
+    <!-- Vidstack video -->
+    <link rel="stylesheet" href="https://cdn.vidstack.io/player.css" />
+    <link rel="stylesheet" href="https://cdn.vidstack.io/plyr.css" />
 
 </head>
 
