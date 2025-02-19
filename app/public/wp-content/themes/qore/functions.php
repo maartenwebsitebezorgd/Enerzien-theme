@@ -73,18 +73,6 @@ function customize_image_sizes($sizes, $size, $image_src, $image_meta, $attachme
     return '(max-width: 1200px) 100vw, 1200px';
 }
 
-function use_archive_template_for_blog($template)
-{
-    if (is_home()) {
-        $archive_template = locate_template('archive.php');
-        if ($archive_template) {
-            return $archive_template;
-        }
-    }
-    return $template;
-}
-add_filter('template_include', 'use_archive_template_for_blog');
-
 function enqueue_archive_scripts()
 {
     if (is_home() || is_archive()) {
@@ -303,13 +291,13 @@ function add_quick_edit_featured()
             });
         </script>
         <script type="text/template" id="featured-template">
-                    <div class="inline-edit-group wp-clearfix">
-                        <label class="alignleft">
-                            <input type="checkbox" name="featured_post" value="1">
-                            <span class="checkbox-title">Featured</span>
-                        </label>
-                    </div>
-                </script>
+                                                                                                                                    <div class="inline-edit-group wp-clearfix">
+                                                                                                                                        <label class="alignleft">
+                                                                                                                                            <input type="checkbox" name="featured_post" value="1">
+                                                                                                                                            <span class="checkbox-title">Featured</span>
+                                                                                                                                        </label>
+                                                                                                                                    </div>
+                                                                                                                                </script>
         <?php
     }
 }
@@ -332,3 +320,40 @@ function save_quick_edit_featured($post_id)
     }
 }
 add_action('save_post', 'save_quick_edit_featured');
+
+function use_archive_template($template)
+{
+    if (is_home() || is_archive() || is_category()) {
+        $new_template = locate_template(['archive.php', 'index.php']);
+        if (!empty($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'use_archive_template', 99);
+
+function add_kennisbank_rewrite_rules()
+{
+    add_rewrite_rule(
+        '^kennisbank/([^/]+)/?$',
+        'index.php?category_name=$matches[1]',
+        'top'
+    );
+
+    // Ondersteuning voor paginering
+    add_rewrite_rule(
+        '^kennisbank/([^/]+)/page/?([0-9]{1,})/?$',
+        'index.php?category_name=$matches[1]&paged=$matches[2]',
+        'top'
+    );
+}
+add_action('init', 'add_kennisbank_rewrite_rules');
+
+function remove_category_base()
+{
+    global $wp_rewrite;
+    $wp_rewrite->category_base = '';
+}
+add_action('init', 'remove_category_base');
+

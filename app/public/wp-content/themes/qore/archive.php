@@ -5,20 +5,52 @@
     <!-- Hero Heading Section -->
     <section class="py-20 md:py-24">
         <div class="container">
-            <h1 class="text-[clamp(2.5rem,5vw,5rem)] leading-[1.1] font-bold max-w-[90%] md:max-w-[80%]">
-                <?php
-                if (is_category()) {
-                    echo single_cat_title('', false) . '. ' . category_description();
-                } elseif (is_tag()) {
-                    echo single_tag_title('', false) . '. ' . tag_description();
-                } elseif (is_author()) {
-                    echo 'Articles by ' . get_the_author() . '.';
-                } elseif (is_date()) {
-                    echo get_the_date('F Y') . ' archives.';
-                } else {
-                    echo 'See our thoughts, stories and ideas.';
+            <?php
+            $title = '';
+            $subtitle = '';
+
+            if (is_category()) {
+                // Get current category
+                $category = get_queried_object();
+                $title = get_field('custom_category_title', 'category_' . $category->term_id);
+                $subtitle = get_field('custom_category_subtitle', 'category_' . $category->term_id);
+
+                if (!$title) {
+                    $title = single_cat_title('', false); // Fallback to default category title
                 }
-                ?>
+
+            } elseif (is_home() || is_archive()) {
+                // Get ACF option page fields for blog archive
+                $title = get_field('custom_archive_title', 'option');
+                $subtitle = get_field('custom_archive_subtitle', 'option');
+
+                if (!$title) {
+                    $title = 'Blog'; // Default fallback title for blog archive
+                }
+
+            } elseif (is_tag()) {
+                $title = single_tag_title('', false);
+                $subtitle = tag_description();
+
+            } elseif (is_author()) {
+                $title = 'Articles by ' . get_the_author();
+
+            } elseif (is_date()) {
+                $title = get_the_date('F Y') . ' archive';
+
+            } else {
+                $title = 'See our thoughts, stories, and ideas.';
+            }
+            ?>
+
+            <?php if ($subtitle) : ?>
+                <p class="text-lg font-medium uppercase tracking-wide text-gray-500 mb-4">
+                    <?php echo esc_html($subtitle); ?>
+                </p>
+            <?php endif; ?>
+
+            <h1 class="text-[clamp(2.5rem,5vw,5rem)] leading-[1.1] font-bold max-w-[90%] md:max-w-[80%]">
+                <?php echo esc_html($title); ?>
             </h1>
         </div>
     </section>
@@ -44,7 +76,7 @@
 
     // Only show featured section if we have featured posts
     if ($featured_posts): ?>
-        <section class="overflow-hidden bg-base-100 mb-16">
+        <section class="overflow-hidden bg-base-200 mb-16">
             <div class="container">
                 <div spotlight-feed style="margin-bottom: clamp(5vh, 2.1vw + 4vh, 8vh)"
                     class="grid grid-cols-2 gap-4 s:grid-cols-12 s:gap-[4vw] lg:grid-cols-4 lg:gap-[3vw]">
@@ -68,9 +100,9 @@
                             <!-- Your existing article markup -->
                             <article class="relative overflow-hidden h-full group transition-all duration-300">
                                 <?php if (has_post_thumbnail()): ?>
-                                    <div class="w-full aspect-[4/3]">
+                                    <div class="w-full overflow-hidden aspect-[4/3]">
                                         <?php
-                                        $img_classes = "w-full h-full object-cover";
+                                        $img_classes = "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300";
                                         if ($is_featured) {
                                             the_post_thumbnail('large', ['class' => $img_classes]);
                                         } else {
@@ -129,10 +161,15 @@
         </section>
     <?php endif; ?>
     <header class="mb-8">
-        <div class="container">
+        <div class="container"> 
+       
+        <?php
+        $listing_title = get_field('custom_listing_title', 'option'); 
+        if ($listing_title): ?>
             <h1 class="text-4xl font-bold mb-4">
-                What’s new?
+                <?php echo esc_html($listing_title); ?>
             </h1>
+        <?php endif; ?>
 
            <!-- Category Filters -->
         <div class="relative -mx-4 px-4 md:mx-0 md:px-0">
@@ -213,12 +250,17 @@
                 <aside class="hidden lg:block lg:col-span-4 space-y-8">
                     <!-- About Section -->
                     <div class="bg-gray-100 rounded-lg p-8">
-                        <h2 class="text-2xl font-bold mb-4">PITCH<span class="text-primary">.</span></h2>
-                        <p class="text-gray-600">
-                            Welcome to your go-to destination for fresh perspectives. Dive deep into our rich content
-                            pool
-                            curated meticulously to enlighten, entertain, and engage readers across the globe.
-                        </p>
+                        <?php
+                            $promo_title = get_field('promo_box_title', 'option'); 
+                            if ($promo_title): ?>
+                                <h2 class="text-2xl font-bold mb-4"><?php echo esc_html($promo_title); ?><span class="text-primary">.</span></h2>
+                        <?php endif; ?>
+
+                        <?php
+                            $promo_text = get_field('promo_box_text', 'option'); 
+                            if ($promo_text): ?>
+                                  <p class="text-gray-600"><?php echo esc_html($promo_text); ?></p>
+                        <?php endif; ?>
                     </div>
 
                     <!-- Featured Posts -->

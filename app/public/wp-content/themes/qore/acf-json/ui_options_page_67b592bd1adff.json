@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_67b592bd1adff",
+    "title": "Berichten Instellingen",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Berichten Instellingen",
+    "menu_slug": "berichten-instellingen",
+    "parent_slug": "edit.php",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "update_button": "Updaten",
+    "updated_message": "Opties bijgewerkt",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1739952859
+}
